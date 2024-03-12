@@ -1,66 +1,54 @@
 ---
-en:
-  body: >-
-    # Nuxt3 - Decap CMS boilerplate
+body: >-
+  # Nuxt3 - Decap CMS boilerplate
 
 
-    ## Features
+  ## Features
 
 
-    ### Decap CMS (backend)
+  ### Decap CMS (backend)
 
 
-    * basic 'products' setup (i.e. one level dynamic page names with a re-occuring content structure 
+  * basic 'products' setup (i.e. one level dynamic page names with a re-occuring content structure 
 
-    * SEO anchor ready to go (simply use "- &seo" in any page field) 
+  * SEO anchor ready to go (simply use "- &seo" in any page field) 
 
-    * A typography page to set up type styling easily in one view 
+  * A typography page to set up type styling easily in one view 
 
-    * Dynamic Fields using Yaml anchors (much like a page builder) which includes a carousel/lightbox option for mulitple images
+  * Dynamic Fields using Yaml anchors (much like a page builder) which includes a carousel/lightbox option for mulitple images
 
-    * Cloudinary support 
+  * Cloudinary support 
 
-    * i18n ready to go (set up for two languages)
-
-
-    ### Nuxt
+  * i18n ready to go (set up for two languages)
 
 
-    * Nuxt 3  
+  ### Nuxt
 
-    * Nuxt Content module for markdown rendering and api calls
 
-    * opiniated i18n use: set up for two languages and a domain per language utilizing a .env var (does have live reactive properties)  
+  * Nuxt 3  
 
-    * Locale toggle function  
+  * Nuxt Content module for markdown rendering and api calls
 
-    * drop in Seo component per page
+  * opiniated i18n use: set up for two languages and a domain per language utilizing a .env var (does have live reactive properties)  
 
-    * Dynamic Fields rendering  
+  * Locale toggle function  
 
-    * Image Carousel and Lightbox component 
+  * drop in Seo component per page
 
-    * Dynamic form components 
+  * Dynamic Fields rendering  
 
-    * Button text composable (for i18n use) 
+  * Image Carousel and Lightbox component 
 
-    * basic scss setup including the use of scss variables in any component (v-bind(String) in css, yay!)
-  title: home
-  SEOmetaData:
-    metaImage: https://decapcms.org/img/decap-logo.svg
-    metaDescription: "eqfqwf eqwf qwf qwf wq fwe "
-    metaTitle: "wfef wef ew "
-    keywords: fwe ff ew  fe
-    isArticle: true
-nl:
-  body: >-
-    # Nuxt3 - Decap CMS boilerplate
+  * Dynamic form components 
 
-    Dit zou een nederlandse vertaling kunnen zijn, maar is het niet.
-  SEOmetaData:
-    metaImage: https://decapcms.org/img/decap-logo.svg
-    metaDescription: "eqfqwf eqwf qwf qwf wq fwe "
-    metaTitle: "wfef wef ew "
-    keywords: fwe ff ew  fe
-    isArticle: true
+  * Button text composable (for i18n use) 
+
+  * basic scss setup including the use of scss variables in any component (v-bind(String) in css, yay!)
+title: home
+SEOmetaData:
+  metaImage: https://decapcms.org/img/decap-logo.svg
+  metaDescription: "eqfqwf eqwf qwf qwf wq fwe "
+  metaTitle: "wfef wef ew "
+  keywords: fwe ff ew  fe
+  isArticle: true
 ---
