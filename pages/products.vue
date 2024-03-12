@@ -3,7 +3,7 @@
 		<h1>Products</h1>
 		<div class="cards--container">
 			<div class="product-card __card" v-for="product in productsListData">
-				<NuxtLink :to="'product/' + returnSlug(product[setLocale].title)">
+				<NuxtLink :to="'product/' + returnSlug(product.title)">
 					<img :src="assetUrlBase + product[setLocale].image" />
 					<h3>
 						{{ product[setLocale].title }}
