@@ -43,15 +43,18 @@
 		grid-column: 2;
 		padding: $spacing1;
 		justify-self: center;
+		border-top: 0.1em solid $light-grey;
 		p {
 			margin: 0;
 			display: inline-block;
+			font-family: $font-art;
 		}
 		a {
 			margin-left: $spacing1;
 			display: inline-block;
 			font-style: normal;
 			text-transform: uppercase;
+			font-family: $font-accent;
 		}
 	}
 </style>

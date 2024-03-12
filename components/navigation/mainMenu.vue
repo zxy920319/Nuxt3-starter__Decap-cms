@@ -17,13 +17,14 @@
 					<span>{{ link }}</span>
 				</NuxtLink>
 			</menu>
+			<NavigationLocales v-if="mobileMenuActive" />
 		</nav>
 	</div>
 </template>
 
 <script setup>
 
-const links = ["typography", "dynamicFieldsShowcase", "contact"];
+const links = ["typography", "dynamic-fields", "contact"];
 const mobileMenuActive = ref(false);
 const route = useRoute();
 watch(route, () => {
@@ -37,6 +38,14 @@ function toggleMobileMenu() {
 function menuItemSelected() {
 	mobileMenuActive.value = false;
 }
+
+watch(
+    // closes menu on route change
+    () => route.path,
+    () => {
+        mobileMenuActive.value = false
+    }
+)
 
 </script>
 

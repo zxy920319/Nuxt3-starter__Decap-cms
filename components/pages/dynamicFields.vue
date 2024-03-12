@@ -31,6 +31,7 @@ const props = defineProps([
 section.dynamic-fields {
 	position: relative;
 	margin: $spacing4;
+	padding: $spacing4;
 	&.__large {
 		width: 100%;
 	}

@@ -30,6 +30,7 @@ function toggleLocale() {
     font-size: 1em;
     color: $black;
     height: max-content;
+    width: max-content;
     cursor: pointer;
     transition: 0.3s ease;
     &::before {

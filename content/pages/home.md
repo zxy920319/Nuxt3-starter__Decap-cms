@@ -53,7 +53,10 @@ en:
     keywords: fwe ff ew  fe
     isArticle: true
 nl:
-  body: https://decapcms.org/img/decap-logo.svg
+  body: >-
+    # Nuxt3 - Decap CMS boilerplate
+
+    Dit zou een nederlandse vertaling kunnen zijn, maar is het niet.
   SEOmetaData:
     metaImage: https://decapcms.org/img/decap-logo.svg
     metaDescription: "eqfqwf eqwf qwf qwf wq fwe "

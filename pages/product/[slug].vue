@@ -32,5 +32,9 @@ const assetUrlBase = cEnv + "/image/upload" + '/c_scale/w_600/q_auto:best'
 .singular-product {
 	max-width: 45em;
 	margin-inline: auto;
+	img {
+		position: relative;
+		width: 100%;
+	}
 }
 </style>
