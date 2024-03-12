@@ -17,7 +17,6 @@
 					<span>{{ link }}</span>
 				</NuxtLink>
 			</menu>
-			<NavigationLocales v-if="mobileMenuActive" />
 		</nav>
 	</div>
 </template>

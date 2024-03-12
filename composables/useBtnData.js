@@ -1,9 +1,8 @@
 export const useBtnData = (params) => {
-    const getLocale = useState("setLocale");
-    const { data: buttonData } = useAsyncData("btnData", () => queryContent("/components/buttons").findOne(), {watch: [getLocale]});
+    const { data: buttonData } = useAsyncData("btnData", () => queryContent("/components/buttons").findOne());
     let result = computed(() => {
         if(buttonData.value) {
-            return buttonData.value[getLocale.value][params]
+            return buttonData.value[params]
         } else {
             return "could not retrieve buttonData"
         }

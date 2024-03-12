@@ -2,13 +2,13 @@
 	<main>
 		<h1>Products</h1>
 		<div class="cards--container">
-			<div class="product-card __card" v-for="product in productsListData">
+			<div class="product-card __card" v-for="product in productsList">
 				<NuxtLink :to="'product/' + returnSlug(product.title)">
-					<img :src="assetUrlBase + product[setLocale].image" />
+					<img :src="assetUrlBase + product.image" />
 					<h3>
-						{{ product[setLocale].title }}
+						{{ product.title }}
 					</h3>
-					<span class="description">{{ product[setLocale].description }}</span>
+					<span class="description">{{ product.description }}</span>
 					<button>{{ moreBtn }}</button>
 				</NuxtLink>
 			</div> 		
@@ -19,9 +19,7 @@
 
 <script setup>
 
-const setLocale = useState("setLocale");
-
-const { data: productsListData } = reactive(await useAsyncData("products", () =>
+const { data: productsList } = reactive(await useAsyncData("products", () =>
 	queryContent("/products/").find())
 );
 

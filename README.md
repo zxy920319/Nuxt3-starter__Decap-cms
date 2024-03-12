@@ -14,17 +14,12 @@
 
 * Cloudinary support
 
-* i18n ready to go (set up for two languages)
 
 ### Nuxt
 
 * Nuxt 3  
 
-* Nuxt Content module for markdown rendering and api calls
-
-* opiniated i18n use: set up for two languages and a domain per language utilizing a .env var (does have live reactive properties)  
-
-* Locale toggle function  
+* Nuxt Content module for markdown rendering and api calls 
 
 * drop in Seo component per page
 
@@ -34,6 +29,6 @@
 
 * Dynamic form components
 
-* Button text composable (for i18n use)
+* Button text composable
 
 * basic scss setup including the use of scss variables in any component (v-bind(String) in css, yay!)

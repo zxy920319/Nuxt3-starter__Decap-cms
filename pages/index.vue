@@ -8,22 +8,20 @@
 				<img src="/images/header/decap-logo.svg" alt="logo" width="200" height="100" />
 			</NuxtLink>
 		</div>
-		<PagesMarkdownRenderMarkdown :markdownString="home.body" />
+		<!-- {{  home }} -->
+		<!-- <pre>{{ home }}</pre> -->
+		<PagesMarkdownRenderMarkdown :markdownString="home.content" />
 		<!-- <SeoHead v-if="home.SEOmetaData" :seo="home.SEOmetaData" /> -->
 	</main>
 
 </template>
 
 <script setup>
-const setLocale = useState("setLocale");
 
-const { data: homeData } = reactive(await useAsyncData("home", () =>
+const { data: home } = reactive(await useAsyncData("home", () =>
 	queryContent("/pages/home").findOne())
 );
 
-const home = computed(() => {
-	return homeData[setLocale.value]
-})
 </script>
 
 <style lang="scss" scoped>

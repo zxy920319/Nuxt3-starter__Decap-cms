@@ -2,10 +2,6 @@
 	<main>
 		<h1>contact</h1>
 		<FormsBasicInquery />
-		<!-- <SeoHead
-			v-if="contact.data.seo"
-			:seo="contact.data.seo"
-		/> -->
 	</main>
 </template>
 

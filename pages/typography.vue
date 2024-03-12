@@ -4,23 +4,16 @@
 		class="typography"
 	>	
 		<span>{{ typography.title }}</span>
-		<PagesMarkdownRenderMarkdown :markdownString="typography.body" />
+		<PagesMarkdownRenderMarkdown :markdownString="typography.content" />
 	</main>
 </template>
 
 
 <script setup>
 
-const setLocale = useState("setLocale");
-
-const { data: typographyData } = reactive(await useAsyncData("typography", () =>
+const { data: typography } = reactive(await useAsyncData("typography", () =>
 	queryContent("/pages/typography").findOne())
 );
-
-const typography = computed(() => {
-	// itterates through the locale
-	return typographyData[setLocale.value]
-})
 
 </script>
 

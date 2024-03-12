@@ -1,5 +1,6 @@
 ---
-body: >-
+title: home
+content: >-
   # Nuxt3 - Decap CMS boilerplate
 
 
@@ -44,11 +45,10 @@ body: >-
   * Button text composable (for i18n use) 
 
   * basic scss setup including the use of scss variables in any component (v-bind(String) in css, yay!)
-title: home
 SEOmetaData:
   metaImage: https://decapcms.org/img/decap-logo.svg
-  metaDescription: "eqfqwf eqwf qwf qwf wq fwe "
-  metaTitle: "wfef wef ew "
-  keywords: fwe ff ew  fe
-  isArticle: true
+  metaDescription: Get set up quickly with this Nuxt3 - Decap CMS boilerplate
+  metaTitle: Nuxt3 - Decap CMS boilerplate
+  keywords: nuxt, nuxt3, decap cms, decap, boilerplate
+  isArticle: false
 ---

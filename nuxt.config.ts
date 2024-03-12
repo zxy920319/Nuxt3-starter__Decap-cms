@@ -15,7 +15,6 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			cloudinaryEnvUrl: 'https://res.cloudinary.com/sailsnake-api-test',
-			defaultLocale: process.env.NUXT_PUBLIC_DEFAULT_LOCALE
 		}
 	},
 	css: [

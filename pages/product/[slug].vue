@@ -12,15 +12,9 @@
 
 const route = useRoute();
 
-const setLocale = useState("setLocale");
-
-const { data: productsData } = reactive(await useAsyncData("product", () =>
+const { data: product } = reactive(await useAsyncData("product", () =>
 	queryContent("/products", route.params.slug).findOne())
 );
-
-const product = computed(() => {
-	return productsData[setLocale.value]
-})
 
 const rtc = useRuntimeConfig();
 const cEnv = rtc.public.cloudinaryEnvUrl;

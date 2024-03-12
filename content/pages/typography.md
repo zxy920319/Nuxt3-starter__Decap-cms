@@ -1,6 +1,6 @@
 ---
 title: Style your typography quickly
-body: >-
+content: >-
   # h1
 
 

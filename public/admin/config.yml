@@ -17,17 +17,11 @@ media_library:
     cloud_name: sailsnake-api-test
     api_key: 369353344314747 
 
-i18n:
-  structure: single_file
-  locales: [en, nl]
-  default_locale: en
-
 seo: &seo
   name: "SEOmetaData"
   label: "SEO"
   widget: "object"
   collapsed: true
-  i18n: true
   fields: 
     - { name: "metaTitle", label: "SEO Title", widget: "string", default: "{{ title }}", required: true }
     - { name: "metaDescription", label: "SEO Description", widget: "string", pattern: [".{20,160}", "between 20 and 160 characters"], required: true, hint: "must be between 20 and 160 characters" }
@@ -69,8 +63,6 @@ dfAudio: &dfAudio
   media_library:
     config: 
       multiple: false
-      
-
 
 dfText: &dfText
   name: "dfText"
@@ -83,18 +75,15 @@ dfSettings: &dfSettings
   widget: "object"
   hint: "sets styling rules per section"
   required: true
-  i18n: true
   fields:
     - name: "size"
       label: "Size"
       widget: "select"
       options: ["small", "large"]
-      i18n: duplicate
     - name: "background"
       label: "Background"
       widget: "select"
       options: ["dark", "light"]
-      i18n: duplicate
     
 dynamicFields: &dynamicFields
   name: "dynamicField"
@@ -102,27 +91,24 @@ dynamicFields: &dynamicFields
   widget: "list"
   hint: "pick the desired field type(s)"
   required: true
-  i18n: true
   types: 
     - name: "text"
       label: "Field: Text Editor"
-      widget: "object"
-      i18n: true
+      widget: "object" 
       collapsed: true
       fields:
         - *dfText
     - name: "image"
       label: "Field: Single Image"
       widget: "object"
-      collapsed: true
-      i18n: true
+      collapsed: true  
       fields:
         - *dfImage
     - name: "images"
       label: "Field: Multiple images"
       widget: "object"
       collapsed: true
-      i18n: true
+ 
       fields: 
         - *images
         - name: "displayType"
@@ -133,8 +119,7 @@ dynamicFields: &dynamicFields
     - name: "video"
       label: "Field: Video"
       widget: "object"
-      collapsed: true
-      i18n: true
+      collapsed: true  
       fields:
         - *dfVideo
         - name: "autoplay"
@@ -149,62 +134,50 @@ dynamicFields: &dynamicFields
     - name: "audio"
       label: "Field: Audio"
       widget: "object"
-      collapsed: true
-      i18n: true
+      collapsed: true  
       fields:
         - *dfAudio
 
 collections:
   - name: "global content"
-    label: "globalContennt"
-    i18n:
-      structure: single_file
-      locales: [en, nl]
+    label: "globalContent"
     files: 
       - label: "buttons"
         name: "buttons"
-        file: "content/site/buttons.md"
-        i18n: true
+        file: "content/site/buttons.md"    
         fields: 
           - label: "next"
             name: "next"
-            widget: "string"
-            i18n: true
+            widget: "string"        
           - label: "previous"
             name: "previous"
-            widget: "string"
-            i18n: true
+            widget: "string"        
           - label: "close"
             name: "close"
-            widget: "string"
-            i18n: true
+            widget: "string"        
           - label: "article: more"
             name: "article"
             widget: "string"
             default: "read more"
-            i18n: true
           - label: "form: send"
             name: "send"
             widget: "string"
-            i18n: true
+        
 
   # PRODUCTS
   - name: "products"
     label: "Products" 
     folder: "content/products"
     create: true
-    i18n:
-      structure: single_file
-      locales: [en, nl]
     fields:
       - name: "title"
         label: "Title"
         widget: "string"
-        i18n: duplicate
+
       - name: "description" 
         label: "Short Description"
         widget: "string"
-        i18n: true
+    
       - name: "image"
         label: "feature image"
         widget: "image"
@@ -216,14 +189,10 @@ collections:
       - name: "content" 
         label: "Content"
         widget: "markdown"
-        i18n: true
       # - *seo
   # SINGLE PAGES
   - name: "pages"
     label: "Pages"
-    i18n:
-      structure: single_file
-      locales: [en, nl]
     files:
       - name: "home"
         label: "Home"
@@ -231,7 +200,7 @@ collections:
         format: "frontmatter"
         fields:
           - { name: "title", label: "Title", widget: "string" }
-          - { name: "body", label: "Body", widget: "markdown" }
+          - { name: "content", label: "Content", widget: "markdown" }
           - *seo
       - name: "typography"
         label: "Typography"
@@ -239,12 +208,12 @@ collections:
         format: "frontmatter"
         fields:
           - { name: "title", label: "Title", widget: "string" }
-          - { name: "body", label: "Body", widget: "markdown" }
+          - { name: "content", label: "Content", widget: "markdown" }
       - name: "dynamicFields"
         label: "Dynamic Field"
         file: "content/pages/dynamic-fields.md"
         format: "frontmatter"
-        i18n: true
+    
         fields:
           - { name: "title", label: "Title", widget: "string", i18n: true}
           - name: "sections"
@@ -252,7 +221,7 @@ collections:
             widget: "list"
             hint: "every section can have on or more Dynamic Fields"
             label_singular: "section"
-            i18n: true
+        
             fields: 
               - { name: "name", label: "Section Name", widget: "string"}
               - *dynamicFields
