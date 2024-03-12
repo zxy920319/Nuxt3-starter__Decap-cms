@@ -8,10 +8,8 @@
 				<img src="/images/header/decap-logo.svg" alt="logo" width="200" height="100" />
 			</NuxtLink>
 		</div>
-		<!-- {{  home }} -->
-		<!-- <pre>{{ home }}</pre> -->
 		<PagesMarkdownRenderMarkdown :markdownString="home.content" />
-		<!-- <SeoHead v-if="home.SEOmetaData" :seo="home.SEOmetaData" /> -->
+		<SeoHead v-if="home.SEOmetaData" :seo="home.SEOmetaData" />
 	</main>
 
 </template>
