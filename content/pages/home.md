@@ -20,8 +20,6 @@ content: >-
 
   * Cloudinary support 
 
-  * i18n ready to go (set up for two languages)
-
 
   ### Nuxt
 
@@ -34,7 +32,7 @@ content: >-
 
   * Locale toggle function  
 
-  * drop in Seo component per page
+  * setSeoHead.js composable: uses SEOmetaData Object from page content api  
 
   * Dynamic Fields rendering  
 
@@ -49,5 +47,5 @@ SEOmetaData:
   metaImage: https://decapcms.org/img/decap-logo.svg
   metaDescription: Get set up quickly with this Nuxt3 - Decap CMS boilerplate
   metaTitle: Nuxt3 - Decap CMS boilerplate
-  keywords: nuxt, nuxt3, decap cms, decap, boilerplate
+  keywords: nuxt, nuxt3, decap cms, decap, netlify, netlify cms, boilerplate
 ---
