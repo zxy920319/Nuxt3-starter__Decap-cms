@@ -1,0 +1,24 @@
+/* Allows using scss variables in VUE file!
+How to:
+<script setup>
+    import variables from '~/assets/scss/variables.module.scss';
+    const baseColor = variables.baseColor;
+</script setup>
+
+<style lang="scss">
+.i-are-a-div {
+    color: v-bind(baseColor);
+</style>
+*/
+
+@import "variables";
+
+:export {
+    white: $white;
+    lightGrey: $light-grey;
+    grey: $grey;
+    darkGrey: $dark-grey;
+    black: $black;
+    baseColor: $base-color;
+    secondaryColor: $secondary-color;
+}

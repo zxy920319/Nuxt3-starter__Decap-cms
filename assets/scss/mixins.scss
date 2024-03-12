@@ -1,0 +1,44 @@
+/* MEDIA QUERY breakpoints V3.0
+    USE: @media(*comma seperate* xsm/sm/md/lg/xlg) {
+        *styles*
+    }
+*/
+
+
+$min-breakpoints: (
+    xsm: 0px,
+    sm: 768px,
+    md: 1024px,
+    lg: 1440px,
+    xlg: 1920px
+);
+$max-breakpoints: (
+    xsm: 767px,
+    sm: 1023px,
+    md: 1439px,
+    lg: 1919px,
+	xlg: 20000px
+);
+
+//  mixin to print out media queries (based on map keys passed) 
+@mixin media($keys...) {
+    @each $key in $keys {
+        @media (min-width: map-get($min-breakpoints, $key)) and (max-width: map-get($max-breakpoints, $key)) {
+            @content;
+        }
+    }
+}
+
+/* HOVER ONYL STYLES; i.e. NOT on touchpads 
+    USE: @hover {
+        * styles*
+    }
+*/ 
+
+@mixin hover {
+	@media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+}

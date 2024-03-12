@@ -1,0 +1,108 @@
+// Resets/ cleanups
+button,
+input,
+select,
+option,
+textarea {
+	min-width: 0;
+    max-width: 100%;
+    outline: none;
+    border: none;
+    font: inherit;
+    border: 0;
+    outline: 0;
+}
+
+
+// vars
+$form-background-color: transparent;
+$form-field-background-color: transparent;
+$form-padding: 0;
+$form-border-radius: 0;
+$form-dark-grey: #333;
+$form-base-color: $orange;
+$form-border-color: $black;
+$form-text-color: $white;
+$form-placeholder-color: $grey;
+$form-font-size: 1em;
+$labelSize: 1em;
+$form-error-color: $red;
+$form-focus-color: $orange;
+$form-valid-color: $yellow;
+$formTransition: $transition2;
+
+// wrappers
+form {
+    position: relative;
+	display: block;
+    width: 100%;
+    margin: auto;
+}
+
+fieldset {
+    width: 100%;
+	padding: $form-padding;
+	border: none; // default override
+}
+
+.input-wrapper {
+	padding: $spacing2 0;
+    box-sizing: border-box;
+    font-size: $form-font-size;
+    position: relative;
+    display: grid;
+	gap: $spacing1;
+    &* {
+        transition: $formTransition;
+    }
+    label {
+        z-index: 0;
+        opacity: 1;
+        transition: $formTransition;
+		grid-row: 1;
+    }
+    input,
+    textarea {
+		grid-row: 2;
+        z-index: 1;
+        background: $form-field-background-color;
+        color: $form-text-color;
+		padding: $spacing1;
+		&::placeholder {
+			color: $form-placeholder-color;
+		}
+        &:focus {
+			outline: 1px solid $form-focus-color;
+        }
+    }
+    input, textarea {
+        outline: 1px solid $form-border-color;
+        outline: none;
+		&:focus:valid {
+			outline: 1px solid $form-valid-color;
+		}
+        &:not(:focus):invalid {
+            outline: 1px solid $form-border-color; // targets empty fields
+        }
+        // Validations
+        &:invalid:not(:placeholder-shown) {
+            outline: 1px solid $form-error-color;
+            &+label {
+                color: $form-error-color;
+            }
+        }
+    }
+}
+
+// elements
+.input-type-textarea {
+    position: relative;
+    height: max-content;
+    textarea {
+        resize: vertical;
+        overflow: auto;
+        outline: 1px solid $form-border-color;
+        margin: 0;
+    }
+}
+
