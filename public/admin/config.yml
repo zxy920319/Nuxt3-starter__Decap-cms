@@ -27,7 +27,6 @@ seo: &seo
     - { name: "metaDescription", label: "SEO Description", widget: "string", pattern: [".{20,160}", "between 20 and 160 characters"], required: true, hint: "must be between 20 and 160 characters" }
     - { name: "metaImage", label: "SEO image", widget: "image"}
     - { name: "keywords", label: "keywords", widget: "string", hint: "keywords are comma seperated", required: false }
-    - { name: "isArticle", label: "article ?", widget: "boolean", default: false, hint: "activate is if the content is an article", required: false }
 
 images: &images
   name: "images"

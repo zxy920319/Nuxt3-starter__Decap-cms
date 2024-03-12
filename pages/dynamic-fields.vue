@@ -11,6 +11,7 @@ const { data: dynamicFields } = reactive(await useAsyncData("dynamic-fields", ()
 	queryContent("/pages/dynamic-fields").findOne())
 );
 
+setSeoHead(dynamicFields.SEOmetaData);
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,6 +1,4 @@
 - main branch: no i18n
     - page.home body => content
     - page.typography body => content
-- i18n branch
 - set up previews?
-- create SEO composable

@@ -50,5 +50,4 @@ SEOmetaData:
   metaDescription: Get set up quickly with this Nuxt3 - Decap CMS boilerplate
   metaTitle: Nuxt3 - Decap CMS boilerplate
   keywords: nuxt, nuxt3, decap cms, decap, boilerplate
-  isArticle: false
 ---

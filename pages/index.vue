@@ -9,7 +9,7 @@
 			</NuxtLink>
 		</div>
 		<PagesMarkdownRenderMarkdown :markdownString="home.content" />
-		<SeoHead v-if="home.SEOmetaData" :seo="home.SEOmetaData" />
+		<!-- <SeoHead v-if="home.SEOmetaData" :seo="home.SEOmetaData" /> -->
 	</main>
 
 </template>
@@ -19,6 +19,8 @@
 const { data: home } = reactive(await useAsyncData("home", () =>
 	queryContent("/pages/home").findOne())
 );
+
+setSeoHead(home.SEOmetaData);
 
 </script>
 

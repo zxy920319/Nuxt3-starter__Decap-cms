@@ -55,5 +55,5 @@ SEOmetaData:
   metaTitle: Dynamic Fields
   metaDescription: These are an example of dynamic fields in Decap CMS
   metaImage: /cld-sample.jpg
-  keywords: Nuxt, Decap, CMS
+  keywords: Nuxt, Decap, CMS, page building, dynamic fields
 ---
