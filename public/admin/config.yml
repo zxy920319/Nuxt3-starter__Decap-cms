@@ -138,8 +138,8 @@ dynamicFields: &dynamicFields
         - *dfAudio
 
 collections:
-  - name: "global content"
-    label: "globalContent"
+  - name: "globalContent"
+    label: "global content"
     files: 
       - label: "buttons"
         name: "buttons"
