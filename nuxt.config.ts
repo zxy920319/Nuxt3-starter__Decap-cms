@@ -23,6 +23,7 @@ export default defineNuxtConfig({
 		"@/assets/scss/main.scss",
 		"@/assets/scss/type.scss",
 		"@/assets/scss/forms.scss",
+		"@/assets/scss/cards.scss",
 	],
 	vite: {
 		css: {

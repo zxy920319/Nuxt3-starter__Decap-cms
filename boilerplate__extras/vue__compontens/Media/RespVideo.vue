@@ -20,6 +20,8 @@ const videoUrl = cEnv + "/video/upload/w_1920/q_auto:good/" + props.url;
 
 const vidId = ref('video--' + props.id);
 
+
+// AUTOPLAY: when in view
 onMounted(() => {
 	if (process.client && props.autoplay) {
 		// Intersection Observer for Autoplay attr
