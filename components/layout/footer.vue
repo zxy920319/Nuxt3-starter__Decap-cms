@@ -4,10 +4,9 @@
 			id="__by-sailsnake"
 		>
 			<p>build by:</p>
-			<a
-				href="http://www.sailsnake.com"
-				target="_blank"
-				>Sailsnake</a
+			<a href="http://www.sailsnake.com" target="_blank">
+				<img src="/images/header/Sailsnake-logo.png" />
+			</a
 			>
 		</div>
 	</footer>
@@ -55,6 +54,10 @@
 			font-style: normal;
 			text-transform: uppercase;
 			font-family: $font-accent;
+			img {
+				height: $font-size5;
+				width: auto;
+			}
 		}
 	}
 </style>

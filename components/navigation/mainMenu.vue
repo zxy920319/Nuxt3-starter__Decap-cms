@@ -9,12 +9,8 @@
 				<NuxtLink to="/" class="menu-item item--home" prefetch>
 					<span>home</span>
 				</NuxtLink>
-				<NuxtLink to="/products" class="menu-item" prefetch>
-					<span>products</span>
-				</NuxtLink>
-				<NuxtLink v-for="link in links" :to="'/' + link" :class="['menu-item', 'item--' + link]"
-					@click="menuItemSelected">
-					<span>{{ link }}</span>
+				<NuxtLink to="/typography" class="menu-item" prefetch>
+					<span>typography</span>
 				</NuxtLink>
 			</menu>
 		</nav>
@@ -23,7 +19,6 @@
 
 <script setup>
 
-const links = ["typography", "dynamic-fields", "contact"];
 const mobileMenuActive = ref(false);
 const route = useRoute();
 watch(route, () => {

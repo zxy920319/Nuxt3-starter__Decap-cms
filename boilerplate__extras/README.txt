@@ -1,27 +1,29 @@
 # In this folder you will find extra files that are provided seperatly so the main boilerplate stays un-opiniated. 
 
-## Scoped Vue components (not dependent on other components) 
+## vue__components
+
+### Scoped Vue components (not dependent on other components) 
 
 - Media/Carousel
 - Media/Lightbox
-- Media/Cloudinary based responsive image component 
-- Media/Cloudinary based Repsonsive video component
-- Content/DynamicFields* (*read more further down this doc)
+- Media/Cloudinary based responsive image component (WIP)
+- Media/Cloudinary based Responsive video component (WIP)
+- misc/DynamicFields* (*read more further down this doc)
+- misc/ParseMarkdown: Render ANY piece of markdown using NUXT Content's Markdown component
 - Button (with 'submit' boolean for use in forms) WIP
-- Content/RenderMarkdown: Render ANY piece of markdown using NUXT Content's Markdown component
 
 
-## Unscoped Vue components (modular in relation to another (parent) Vue component)
+### Unscoped Vue components (modular in relation to another (parent) Vue component)
 
-### Forms/ (with input validation function)
+#### Forms/ (with input validation function)
 
-#### Basicinquery.vue (Parent): A contact form with just the minium fields. *Note: <form> POST is setup for Netlify Forms handling.*
+##### Basicinquery.vue (Parent): A contact form with just the minium fields. *Note: <form> POST is setup for Netlify Forms handling.*
     - InputName
     - InputEmail
     - InputSubject
     - InputTextarea
 
-#### additional ready to use fields    
+##### additional ready to use fields    
     - InputEmail
     - InputFile WIP
     - InputMultipleChoice WIP
@@ -32,7 +34,11 @@
     - InputTextarea
     
 
-## Config.yaml code snippets (copy and paste-able code blocks)
+## decap__config
+
+In extra--Config.yaml you will find code snippets (copy and paste-able code blocks)
+
+
 
 
 ## Pages: 
