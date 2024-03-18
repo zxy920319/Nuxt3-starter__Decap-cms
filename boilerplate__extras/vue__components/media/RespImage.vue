@@ -15,14 +15,36 @@
 </template>
 
 <script setup>
-//
-const props = defineProps(["url", "lightbox", "objectFit", "color"]);
+
+const props = defineProps({ 
+	url: String, 
+	lightbox: Boolean, 
+	objectFit: String, 
+	color: String 
+});
 
 const setLocale = useState("setLocale")
 
+// Get Cloudinary enviroment url
 const rtc = useRuntimeConfig();
 const cEnv = rtc.public.cloudinaryEnvUrl;
-const imageUrl = cEnv + "/image/upload/c_scale,w_1920,q_auto:best/" + props.url;
+
+// Preset Cloudinary imaga size transformation
+const respSize = ref("w_1920")
+
+// Change image transformation to 1920 or 1024
+// NOTE: adding more variables will lead to more transformations! Keep your transformations per month in check ;)
+onMounted(() => {
+	if (process.client) {
+		window.innerWidth < 1024 ? respSize.value = "w_1024" : respSize.value = "w_1920"
+	}
+})
+
+// Build absolute url
+const imageUrl = computed(() => {
+	return cEnv + "/image/upload/c_scale," + respSize.value + ",q_auto:best" + props.url;
+})
+
 
 const objectFit = props.objectFit ? props.objectFit : "contain";
 
@@ -33,21 +55,12 @@ const clickEvent = computed(() => {
 	return props.lightbox ? "click" : null;
 });
 
-// colors from SCSS!
-import variables from '~/assets/scss/variables.module.scss';
-
-const baseColor = variables.baseColor;
-const accentColor = computed(() => {
-	let r = props.color ? props.color : baseColor;
-	return r
-})
-
 const tipEnlarge = computed(() => {
-	let r = setLocale.value == 'en' ? 'click to enlarge' : 'klik om te maximaliseren' 
+	let r = setLocale.value == 'en' ? 'click to enlarge' : 'klik om te maximaliseren'
 })
 
 const tipMinimize = computed(() => {
-	let r = setLocale.value == 'en' ? 'click to minize' : 'klik om te minimaliseren' 
+	let r = setLocale.value == 'en' ? 'click to minize' : 'klik om te minimaliseren'
 })
 
 function openLightbox() {
@@ -62,6 +75,16 @@ function closeLightbox() {
 	let body = document.body;
 	body.classList.remove("lightbox-active");
 }
+
+
+// colors from SCSS!
+import variables from '~/assets/scss/variables.module.scss';
+
+const baseColor = variables.baseColor;
+const accentColor = computed(() => {
+	let r = props.color ? props.color : baseColor;
+	return r
+})
 </script>
 
 
@@ -70,6 +93,7 @@ function closeLightbox() {
 	position: relative;
 	width: 100%;
 	height: 100%;
+
 	img {
 		width: 100%;
 		height: 100%;

@@ -14,10 +14,27 @@ const props = defineProps({
 	id: String
 });
 
+// Get Cloudinary enviroment url
 const rtc = useRuntimeConfig();
 const cEnv = rtc.public.cloudinaryEnvUrl;
-const videoUrl = cEnv + "/video/upload/w_1920/q_auto:good/" + props.url;
 
+
+// Preset Cloudinary imaga size transformation
+const respSize = ref("w_1920")
+
+// Change image transformation to 1920 or 1024
+// NOTE: adding more variables will lead to more transformations! Keep your transformations per month in check ;)
+onMounted(() => {
+	if(process.client) {
+		window.innerWidth < 1024 ? respSize.value = "w_1024" : respSize.value = "w_1920"
+	}
+})
+// Build absolute url
+const videoUrl = computed(() => {
+	return cEnv + "/video/upload/c_scale," + respSize.value + ",q_auto:best" + props.url;
+})
+
+// set an id on the video element for JS reference
 const vidId = ref('video--' + props.id);
 
 
