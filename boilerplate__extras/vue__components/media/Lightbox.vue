@@ -92,6 +92,7 @@ body.lightbox-active {
 .__image--wrapper {
 	width: 30em;
 	flex: 1 2 30em;
+	max-width: 60vw;
 	margin: auto;
 	scroll-snap-align: none;
 
