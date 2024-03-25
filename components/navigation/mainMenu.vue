@@ -1,7 +1,8 @@
 <template>
 	<div id="main-menu">
 		<div id="mobile-menu__toggle-button" @click="toggleMobileMenu()" :class="{ mobileMenuOpen: mobileMenuActive }">
-			MENU &#x2630;
+			<span>&#x2630;</span>
+			MENU 
 		</div>
 
 		<nav :class="{ mobileMenuOpen: mobileMenuActive }">
@@ -130,25 +131,22 @@ nav.mobileMenuOpen {
 #mobile-menu__toggle-button {
 	display: none;
 	cursor: pointer;
-
-	img.__toggle-button {
-		width: 1em;
-		height: auto;
-		margin-top: $spacing1;
-		margin-right: $spacing0;
-	}
-
 	@include media(xsm) {
 		position: absolute;
 		z-index: 99;
 		display: block;
+		font-size: 0.8em;
+		text-align: center;
 		width: max-content;
-		font-size: $font-size4;
 		margin-inline: auto;
 		justify-self: center;
-		padding: 0 $spacing0;
+		padding: $spacing1;
 		margin-top: $spacing0;
 		right: 0;
+	}
+	span {
+		font-size: $font-size2;
+		display: block;
 	}
 }
 
