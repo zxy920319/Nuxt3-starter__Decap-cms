@@ -1,5 +1,6 @@
-# disable in production: 
+# disable in production:  
 # local_backend: true
+# command to run a local Decap instance: npx-decap-server
 
 backend:
   name: git-gateway

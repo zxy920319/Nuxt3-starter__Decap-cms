@@ -19,12 +19,15 @@
 
 <script setup>
 
+
+// The single product links to: /pages/product/[slug].vue
+
 const { data: productsList } = reactive(await useAsyncData("products", () =>
 	queryContent("/products/").find())
 );
 
 function returnSlug(s) {
-	// cause api doesnt provide {slug} 
+	// cause api/ Decap doesnt provide {slug} 
 	let result = s.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[\s_]+/g, "-").toLowerCase();
 	return result;
 }

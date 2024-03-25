@@ -12,8 +12,16 @@ export default defineNuxtConfig({
 		},
 	},
 	modules: ["@nuxt/content"],
+	content: {
+		markdown: {
+			// stop the markdownParser from turning headings into anchor tags
+			// Alternatively have a read on markdown render options via the Content module at https://content.nuxt.com/get-started/configuration#markdown
+			anchorLinks: false
+		}
+	},
 	runtimeConfig: {
 		public: {
+			// set your cloudinary env url (used to built responsive assets links)
 			cloudinaryEnvUrl: 'https://res.cloudinary.com/sailsnake-api-test',
 		}
 	},

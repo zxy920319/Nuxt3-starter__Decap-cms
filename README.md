@@ -4,12 +4,6 @@
 
 This boilerplate will get you going quick in building with Nuxt and Decap CMS. The base boilerplate consists out of the following:
 
-
-### install:
-
-
-
-
 ### Decap CMS (config.yml)
 
 * SEO anchor ready to go (simply use "- &seo" in any page/ file collection)
@@ -41,9 +35,16 @@ This boilerplate will get you going quick in building with Nuxt and Decap CMS. T
 
 ### Composables:
 
-* a 'setSeoHead' composable: just feed the SEOmetaData object (defined in config.yaml) from your api data; `setSeoHead(apiData.SEOmetaData)`. E-z P-z!
+* a 'setSeoHead' composable: just feed the SEOmetaData object (defined in config.yaml) from your api data; `setSeoHead(apiData.SEOmetaData)`
 
 * useBtnData composable: does an api call to /content/buttons.md and returns a single button string. Example `cosnt buttonText = useBtnData('buttonsApi.readmore')` => result: `"hello! Read moar!"`. Conistent button text's throughout your site when using `slot` in a `button.vue` component
+
+
+## Install
+
+1. Clone this repo
+
+2. `yarn install` or `npm install`
 
 
 ## Boilerplate__extras (folder) !

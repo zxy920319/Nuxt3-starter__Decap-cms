@@ -2,7 +2,7 @@
 	<main>
 		<h1>contact</h1>
 		<!-- Place the ~/boilerplate__extras/nuxt__components/forms folder in ~/components for use of: -->
-		<!-- <FormsBasicInquery /> -->
+		<FormsBasicInquery />
 	</main>
 </template>
 

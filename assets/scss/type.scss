@@ -1,11 +1,17 @@
-h1, .h1
+h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5 {
 	font-weight: bold;
+	margin-top: 2em;
+	margin-bottom: 0;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
 	font-family: $font-accent;
-	margin-top: 0;
 	text-transform: uppercase;
 }
 
@@ -13,6 +19,16 @@ h1, .h1 {
 	font-size: $font-size1;
 	@include media(xsm) {
 		font-size: $font-size2;
+	}
+	position: relative;
+	&:before {
+		position: absolute;
+		content: "";
+		left: -0.2em;
+		top: 0;
+		height: 100%;
+		width: 0.1em;
+		background-image: linear-gradient($base-color, $secondary-color);
 	}
 }
 
@@ -32,6 +48,12 @@ h5, .h5 {
 	font-size: $font-size6;
 }
 
+// h3, .h3,
+h4, .h4,
+h5, .h5 {
+	font-family: $font-main;
+}
+
 blockquote {
 	font-size: $font-size5;
 	font-family: $font-art;
@@ -41,9 +63,18 @@ blockquote {
 }
 
 p {
-	text-align: justify;
-	text-justify: inter-word;
 	font-size: $font-size7;
 	line-height: 1.45em;
-	max-width: 45em;
 }
+
+main li {
+	margin-block: $spacing1;
+	line-height: 1.45em;
+}
+
+code {
+	background: $light-grey;
+	padding: 0 $spacing1;
+	display: inline-block;
+}
+
