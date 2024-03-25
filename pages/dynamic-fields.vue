@@ -1,6 +1,6 @@
 <template>
 	<main id="main" class="dynamic-fields-showcase">
-		<PagesDynamicFields v-for="(zone, i) in dynamicFields.sections" :zone="zone"
+		<MiscDynamicFields v-for="(zone, i) in dynamicFields.sections" :zone="zone"
             :sid="'section-' + i" :key="i" />
 	</main>
 </template>
