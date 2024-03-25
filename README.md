@@ -3,7 +3,7 @@
 **Live boilerplate example:** https://sailsnake-nuxt-decap-boilerplate.netlify.app
 
 
-**Link to repo:** https://github.com/Sfolkerts89/Nuxt3-starter__Decap-cm
+**Link to repo:** https://github.com/Sfolkerts89/Nuxt3-starter__Decap-cms
 
 ## A simple starting point
 
