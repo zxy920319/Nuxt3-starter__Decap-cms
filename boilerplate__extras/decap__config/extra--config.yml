@@ -6,6 +6,7 @@
 # collections: 
   # - name: pages
       # files: 
+          #<start snippet>
           - name: "products"
             label: "Products" 
             folder: "content/products"
@@ -30,8 +31,8 @@
               - name: "content" 
                 label: "Content"
                 widget: "markdown"
-              # - *seo
-
+              - *seo
+            #<end snippet>
 
 # ___
 # Dynamic Fields:
@@ -156,6 +157,7 @@ dynamicFields: &dynamicFields
 # collections: 
   # - name: pages
       # files: 
+          #<start snippet>
           - name: "dynamicFields"
             label: "Dynamic Field"
             file: "content/pages/dynamic-fields.md"
@@ -172,3 +174,4 @@ dynamicFields: &dynamicFields
                   - *dynamicFields
                   - *dfSettings
               - *seo
+          #<end snippet>

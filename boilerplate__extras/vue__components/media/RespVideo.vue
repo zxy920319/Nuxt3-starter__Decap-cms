@@ -1,5 +1,5 @@
 <template>
-	<video loading="lazy" :muted="muted" :loop="loop" :id="vidId" width="800" height="600">
+	<video loading="lazy" :muted="!hasSound" :loop="loop" :autoplay="props.autoplay" :controls="props.hasSound" :id="vidId" width="800" height="600">
 		<source :src="videoUrl" />
 	</video>
 </template>
@@ -8,37 +8,32 @@
 
 const props = defineProps({
 	url: String,
-	muted: Boolean,
+	hasSound: Boolean,
 	autoplay: Boolean,
 	loop: Boolean,
 	id: String
 });
 
-// Get Cloudinary enviroment url
+const route = useRoute();
 const rtc = useRuntimeConfig();
 const cEnv = rtc.public.cloudinaryEnvUrl;
 
-
-// Preset Cloudinary imaga size transformation
 const respSize = ref("w_1920")
 
-// Change image transformation to 1920 or 1024
-// NOTE: adding more variables will lead to more transformations! Keep your transformations per month in check ;)
 onMounted(() => {
 	if(process.client) {
 		window.innerWidth < 1024 ? respSize.value = "w_1024" : respSize.value = "w_1920"
 	}
 })
-// Build absolute url
+
 const videoUrl = computed(() => {
 	return cEnv + "/video/upload/c_scale," + respSize.value + ",q_auto:best" + props.url;
 })
 
-// set an id on the video element for JS reference
-const vidId = ref('video--' + props.id);
 
+const extraId = props.url.slice(-10);
+const vidId = ref('video--' + props.id + extraId);
 
-// AUTOPLAY: when in view
 onMounted(() => {
 	if (process.client && props.autoplay) {
 		// Intersection Observer for Autoplay attr
@@ -49,7 +44,7 @@ onMounted(() => {
 			threshold: 0.5,
 		};
 
-		function doShit(entries) {
+		function doShit(entries, observer) {
 			entries.forEach((entry) => {
 				entry.isIntersecting ? entry.target.play() : entry.target.pause();
 			})
@@ -68,6 +63,5 @@ video {
 	position: relative;
 	width: 100%;
 	height: auto;
-	max-height: 100vh;
 }
 </style>

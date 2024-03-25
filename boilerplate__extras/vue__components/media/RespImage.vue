@@ -16,6 +16,9 @@
 
 <script setup>
 
+// NOTES
+// This is a respsonvive image component via changing cloudinary transform parameters. And includes a single image instance lightbox function when enabled in props 
+
 const props = defineProps({ 
 	url: String, 
 	lightbox: Boolean, 
@@ -23,7 +26,7 @@ const props = defineProps({
 	color: String 
 });
 
-const setLocale = useState("setLocale")
+
 
 // Get Cloudinary enviroment url
 const rtc = useRuntimeConfig();
@@ -45,9 +48,10 @@ const imageUrl = computed(() => {
 	return cEnv + "/image/upload/c_scale," + respSize.value + ",q_auto:best" + props.url;
 })
 
-
+// set object fit in css
 const objectFit = props.objectFit ? props.objectFit : "contain";
 
+// dialog (lightbox container) open?
 const diagOpen = ref(false);
 
 const clickEvent = computed(() => {
@@ -55,13 +59,9 @@ const clickEvent = computed(() => {
 	return props.lightbox ? "click" : null;
 });
 
-const tipEnlarge = computed(() => {
-	let r = setLocale.value == 'en' ? 'click to enlarge' : 'klik om te maximaliseren'
-})
+const tipEnlarge = "click to enlarge"
 
-const tipMinimize = computed(() => {
-	let r = setLocale.value == 'en' ? 'click to minize' : 'klik om te minimaliseren'
-})
+const tipMinimize = "click to minimize"
 
 function openLightbox() {
 	diagOpen.value = true;
@@ -80,6 +80,7 @@ function closeLightbox() {
 // colors from SCSS!
 import variables from '~/assets/scss/variables.module.scss';
 
+// use baseColor from assets/scss/variables unless provided otherwise via props
 const baseColor = variables.baseColor;
 const accentColor = computed(() => {
 	let r = props.color ? props.color : baseColor;

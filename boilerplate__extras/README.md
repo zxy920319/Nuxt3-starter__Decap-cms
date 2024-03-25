@@ -52,3 +52,15 @@ Uber minimal contact form page with Basicinquery.vue
 ### dynamic-fields
 
 Showcases a modular page building experience. Use in combination with the 'dynamic fields' page code snippet from '~/boilerplate__extras/decap__config/extra--config'.
+
+
+
+## More about 'dynamic-fields'
+
+The dynamic fields setup allows for a page building experience using 'fields' i.e. predetermined template blocks which the editor can add and choose. This allows you a fine grain control over the data structure (extend the blocks as you wish, and or add more) and styling.
+
+### How to use/ implement
+1. Copy all the related template code blocks in decap__config/extra__config.yml into your actual config.yml file
+2. Copy/ move vue__components/dynamicFields.vue into your component directory (and subfolder of your choosing/ design) 
+3. Copy/ move nuxt__pages/dynamic-fields.vue into your /pages directory and rename to suite your needs.
+4. Additional note: the v-for markup can be place in any file you like offcourse. Happy modular use! 
