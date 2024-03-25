@@ -1,5 +1,0 @@
-- main branch: no i18n
-    - page.home body => content
-    - page.typography body => content
-- set up previews?
-- netlify identity thingy
