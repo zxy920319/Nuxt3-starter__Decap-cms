@@ -1,6 +1,8 @@
 <template>
 	<main id="main" class="dynamic-fields-showcase">
-		<PagesDynamicFields v-for="(zone, i) in dynamicFields.sections" :zone="zone"
+		
+		<!-- Place the ~/boilerplate__extras/nuxt__components/misc/dynamic-fields folder in ~/components/misc/ for use of: -->
+		<MiscDynamicFields v-for="(zone, i) in dynamicFields.sections" :zone="zone"
             :sid="'section-' + i" :key="i" />
 	</main>
 </template>

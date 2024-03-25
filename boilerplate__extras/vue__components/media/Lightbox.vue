@@ -17,6 +17,10 @@
 </template>
 
 <script setup>
+
+// NOTES
+// This is a multi image lightbox component used to render mutliple images in a grid, usefull for simple portfolio displays
+
 const props = defineProps(["images", "color"]);
 
 const rtc = useRuntimeConfig();
@@ -29,15 +33,19 @@ import variables from '~/assets/scss/variables.module.scss';
 
 const baseColor = variables.baseColor;
 const accentColor = computed(() => {
-	let r = props.color ? props.color : baseColor;
-	return r
+	let color = props.color ? props.color : baseColor;
+	return color
 })
 
 const btnClose = useBtnData('close')
 
-const activeItem = ref(null); // override with a default?
+
+// Lightbox vars and functions
+
+const activeItem = ref(null); 
 const overlayActive = ref(false);
 const arrayLength = props.images.length;
+
 function selectItem(i) {
 	let body = document.body;
 	activeItem.value = i;
@@ -141,6 +149,7 @@ body.lightbox-active {
 	display: none;
 	opacity: 0;
 	width: 100vw;
+	// interpolate scss variable into css custom property for repeated use
 	--btn-positions: #{$spacing3};
 
 	.__overlay--nav {

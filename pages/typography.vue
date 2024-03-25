@@ -1,10 +1,7 @@
 <template>
-	<main
-		id="main"
-		class="typography"
-	>	
+	<main id="main" class="typography">
 		<span>{{ typography.title }}</span>
-		<PagesMarkdownRenderMarkdown :markdownString="typography.content" />
+		<MiscParseMarkdown :markdownString="typography.content" />
 	</main>
 </template>
 
@@ -18,14 +15,13 @@ const { data: typography } = reactive(await useAsyncData("typography", () =>
 </script>
 
 <style lang="scss" scoped>
-	main {
-		@media screen and (orientation: landscape) {
-			display: grid;
-			justify-items: center;
-			align-items: center;
-		}
-		div {
-			max-width: 500px;
-		}
+main {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+
+	div {
+		max-width: 500px;
 	}
+}
 </style>

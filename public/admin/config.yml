@@ -1,5 +1,6 @@
-# disable in production: 
+# disable in production:  
 # local_backend: true
+# command to run a local Decap instance: npx-decap-server
 
 backend:
   name: git-gateway
@@ -14,9 +15,11 @@ media_library:
   name: cloudinary
   output_filename_only: true
   config:
-    cloud_name: sailsnake-api-test
-    api_key: 369353344314747 
+    cloud_name: <YOUR_CLOUD_NAME_HERE>
+    api_key: <YOUR_API_KEY_HERE> 
 
+
+# SEO anchor:
 seo: &seo
   name: "SEOmetaData"
   label: "SEO"
@@ -28,114 +31,7 @@ seo: &seo
     - { name: "metaImage", label: "SEO image", widget: "image"}
     - { name: "keywords", label: "keywords", widget: "string", hint: "keywords are comma seperated", required: false }
 
-images: &images
-  name: "images"
-  label: "Images"
-  widget: "image"
-  choose_url: true
-  media_library: 
-    config:
-      multiple: true
 
-dfImage: &dfImage
-  label: "Dynamic Field - Single image"
-  name: "image"
-  widget: "image"
-  choose_url: true
-  media_library:
-    config:
-      multiple: false
-
-dfVideo: &dfVideo
-  label: "Dynamic Field - Video"
-  name: "video"
-  widget: "file"
-  choose_url: true
-  media_library:
-    config:
-      multiple: false
-
-dfAudio: &dfAudio
-  label: "Dynamic Field - Audio"
-  name: "audio"
-  widget: "file"
-  media_library:
-    config: 
-      multiple: false
-
-dfText: &dfText
-  name: "dfText"
-  label: "Dynamic Field - Text"
-  widget: "markdown"
-
-dfSettings: &dfSettings
-  name: "dfSettings"
-  label: "Settings (required)"
-  widget: "object"
-  hint: "sets styling rules per section"
-  required: true
-  fields:
-    - name: "size"
-      label: "Size"
-      widget: "select"
-      options: ["small", "large"]
-    - name: "background"
-      label: "Background"
-      widget: "select"
-      options: ["dark", "light"]
-    
-dynamicFields: &dynamicFields
-  name: "dynamicField"
-  label: "Dynamic Field"
-  widget: "list"
-  hint: "pick the desired field type(s)"
-  required: true
-  types: 
-    - name: "text"
-      label: "Field: Text Editor"
-      widget: "object" 
-      collapsed: true
-      fields:
-        - *dfText
-    - name: "image"
-      label: "Field: Single Image"
-      widget: "object"
-      collapsed: true  
-      fields:
-        - *dfImage
-    - name: "images"
-      label: "Field: Multiple images"
-      widget: "object"
-      collapsed: true
- 
-      fields: 
-        - *images
-        - name: "displayType"
-          label: "select display type"
-          widget: "select"
-          options: ["carousel", "lightbox"]
-          required: true
-    - name: "video"
-      label: "Field: Video"
-      widget: "object"
-      collapsed: true  
-      fields:
-        - *dfVideo
-        - name: "autoplay"
-          label: "autoplay"
-          widget: "boolean"
-        - name: "muted"
-          label: "muted"
-          widget: "boolean"
-        - name: "loop"
-          label: "loop"
-          widget: "boolean"
-    - name: "audio"
-      label: "Field: Audio"
-      widget: "object"
-      collapsed: true  
-      fields:
-        - *dfAudio
 
 collections:
   - name: "globalContent"
@@ -162,33 +58,6 @@ collections:
             name: "send"
             widget: "string"
         
-
-  # PRODUCTS
-  - name: "products"
-    label: "Products" 
-    folder: "content/products"
-    create: true
-    fields:
-      - name: "title"
-        label: "Title"
-        widget: "string"
-
-      - name: "description" 
-        label: "Short Description"
-        widget: "string"
-    
-      - name: "image"
-        label: "feature image"
-        widget: "image"
-        choose_url: true
-        i18n: "duplicate"
-        media_library:
-          config:
-            multiple: false
-      - name: "content" 
-        label: "Content"
-        widget: "markdown"
-      # - *seo
   # SINGLE PAGES
   - name: "pages"
     label: "Pages"
@@ -208,24 +77,7 @@ collections:
         fields:
           - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
-      - name: "dynamicFields"
-        label: "Dynamic Field"
-        file: "content/pages/dynamic-fields.md"
-        format: "frontmatter"
-    
-        fields:
-          - { name: "title", label: "Title", widget: "string", i18n: true}
-          - name: "sections"
-            label: "Sections"
-            widget: "list"
-            hint: "every section can have on or more Dynamic Fields"
-            label_singular: "section"
-        
-            fields: 
-              - { name: "name", label: "Section Name", widget: "string"}
-              - *dynamicFields
-              - *dfSettings
-          - *seo
+     
 
           
 

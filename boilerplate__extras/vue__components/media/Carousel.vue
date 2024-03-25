@@ -1,6 +1,6 @@
 <template>
 	<div class="carousel" :class="[{ enlargeActive: enlargeActive }, { enlarge: props.hasEnlarge }]">
-		<div class="carousel__inner" id="carousel__inner" ref="inner" :style="innerStyles" @click="toggleenlarge">
+		<div class="carousel__inner" id="carousel__inner" ref="inner" :style="innerStyles" @click="toggleEnlarge">
 			<div v-if="props.hasEnlarge" class="enlarge-hint">
 				<span class="__enlarge" v-if="enlargeActive === false">&#10063;</span>
 				<span class="__minimize" v-if="enlargeActive === true">&#10064;</span>
@@ -31,8 +31,13 @@
 
 <script setup>
 
+// README
+// Your all well known carousel/ slider 
+
 const props = defineProps(["imageOnly", "slides", "timed", "hasEnlarge", "color"]);
 
+
+// build url base
 const rtc = useRuntimeConfig();
 const cEnv = rtc.public.cloudinaryEnvUrl;
 const imageUrlBase = cEnv + "/image/upload/c_scale,w_1920,q_auto:best/";
@@ -47,21 +52,11 @@ const accentColor = computed(() => {
 	return r
 })
 
-// enlarge:
-const enlargeActive = ref(false);
-
-function toggleenlarge() {
-	props.hasEnlarge ? enlargeActive.value = !enlargeActive.value : '';
-	setStep();
-
-	setTimeout(() => {
-		inner.value.scrollIntoView({ behavior: "smooth", block: "center" });
-	}, 500);
-	settings.value = enlargeActive ? settingsLarge : settingsSmall; // changing params blocks request
-}
 
 // Carousel:
-// code thanks to: https://github.com/luvejo/vue-3-carousel-tutorial/blob/composition-api/src/components/Carousel.vue
+// base code thanks to: https://github.com/luvejo/vue-3-carousel-tutorial/blob/composition-api/src/components/Carousel.vue
+// This code has been altered to display using grid
+
 
 const inner = ref(null);
 const slides = props.slides;
@@ -171,6 +166,22 @@ function resetTranslate() {
 		transform: `translateX(-${step.value})`,
 	};
 }
+
+
+// 'fullscreen' mode (not an actual lightbox)
+// enlarge:
+const enlargeActive = ref(false);
+
+function toggleEnlarge() {
+	props.hasEnlarge ? enlargeActive.value = !enlargeActive.value : '';
+	setStep();
+
+	setTimeout(() => {
+		inner.value.scrollIntoView({ behavior: "smooth", block: "center" });
+	}, 500);
+	settings.value = enlargeActive ? settingsLarge : settingsSmall; // changing params blocks request
+}
+
 
 onMounted(() => {
 	setStep();
@@ -290,7 +301,6 @@ $car_width: 40vw;
 	grid-row: 1;
 	grid-column: 1;
 	border: 3px solid v-bind(accentColor);
-	// z-index: 100;
 	opacity: 0;
 	transition: $transition3;
 	display: grid;
@@ -363,9 +373,11 @@ $car_width: 40vw;
 		}
 
 		#carousel__navigation--prev {
+			// set something
 		}
 
 		#carousel__navigation--next {
+			// set something
 		}
 	}
 }
