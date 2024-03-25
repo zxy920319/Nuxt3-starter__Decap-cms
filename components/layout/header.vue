@@ -21,7 +21,6 @@
 		top: 100%;
 		background-image: linear-gradient(90deg, $base-color, $secondary-color);
 	}
-
 	@include media(xsm) {
 		display: block;
 		padding: $spacing1 0;
