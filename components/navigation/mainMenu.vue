@@ -6,13 +6,19 @@
 		</div>
 
 		<nav :class="{ mobileMenuOpen: mobileMenuActive }">
-			<menu class="main-menu__items">
+
+			<menu class="main-menu__basic">
+				<span class="menu-type">Basic boilerplate menu: </span>
 				<NuxtLink to="/" class="menu-item item--home" prefetch>
 					<span>home</span>
 				</NuxtLink>
-				<NuxtLink to="/products" class="menu-item" prefetch>
-					<span>products</span>
+				<NuxtLink to="/typography" class="menu-item" prefetch>
+					<span>typography</span>
 				</NuxtLink>
+			</menu>
+
+			<menu class="main-menu__boilerplate-extras">
+				<span class="menu-type">Boilerplate Extras menu: </span>
 				<NuxtLink v-for="link in links" :to="'/' + link" :class="['menu-item', 'item--' + link]"
 					@click="menuItemSelected">
 					<span>{{ link }}</span>
@@ -24,11 +30,11 @@
 
 <script setup>
 
-const links = ["typography", "dynamic-fields", "contact"];
+const links = ["products", "dynamic-fields", "contact"];
 const mobileMenuActive = ref(false);
 const route = useRoute();
 watch(route, () => {
-	mobileMenuActive.value = false; 
+	mobileMenuActive.value = false;
 });
 
 function toggleMobileMenu() {
@@ -40,71 +46,102 @@ function menuItemSelected() {
 }
 
 watch(
-    // closes menu on route change
-    () => route.path,
-    () => {
-        mobileMenuActive.value = false
-    }
+	// closes menu on route change
+	() => route.path,
+	() => {
+		mobileMenuActive.value = false
+	}
 )
 
 </script>
 
 <style lang="scss" scoped>
-menu.main-menu__items {
+nav {
+	display: grid;
+	@include media(xsm) {
+		padding-top: 8em; // pushes item below 'header' (toggle-button span:before)
+	}
+}
+
+.main-menu__basic {
+	--hover-background-color: #{$secondary-color};
+}
+
+.main-menu__boilerplate-extras {
+	--hover-background-color: #{$base-color};
+}
+
+.main-menu__basic,
+.main-menu__boilerplate-extras {
 	position: relative;
 	display: flex;
-	gap: $spacing5;
-	max-width: max-content;
-	margin-inline: auto $spacing4;
-	right: 0;
+	flex-wrap: wrap;
+	align-content: center;
+	margin: 0;
+	padding: 0;
+
 	@include media(xsm) {
-		position: absolute;
+		position: relative;
 		display: block;
 		height: 100%;
 		margin: 0;
 		padding-left: 0;
-		padding-top: 8em; // pushes item below 'header' (toggle-button span:before)
-		background: $white;
+	}
+
+	span {
+		padding: $spacing2;
+		width: 8em;
+		@include media(xsm) {
+			width: auto;
+		}
+	}
+
+	.menu-type {
+		font-family: $font-accent;
+		margin-block: auto;
+		display: block;
+		width: 12em;
+		@include media(xsm) {
+			width: auto;
+		}
 	}
 
 	.menu-item {
-		$item-img-height: 1.2em;
-		position: relative;
 		cursor: pointer;
-		display: inline-block;
-
-		* {
-			transition: $transition1;
-		}
-
-		img {
-			position: relative;
-			height: $item-img-height;
-			width: 100%;
-			object-fit: contain;
-		}
-
 		span {
 			display: block;
-			width: 100%;
-			padding: $spacing0 $spacing2;
 			text-align: center;
 			list-style: none;
+			transition: $transition1;
+			@include hover {
+				background: var(--hover-background-color);
+				color: $white;
+			}
 		}
 
 		@include media(xsm) {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			padding: $spacing1 $spacing3;
-
 			&.router-link-active {
-				background: grey;
-				color: white;
+				outline: 0.3em solid var(--hover-background-color);
 			}
 		}
 	}
 }
 
+.main-menu__basic {
+	.menu-type {
+		background: $secondary-color;
+		color: $white;
+	}
+}
+
+.main-menu__boilerplate-extras {
+	color: $white;
+	background: $dark-grey;
+
+	.menu-type {
+		background: $base-color;
+	}
+}
 
 
 // toggle states/ mobile
@@ -112,17 +149,21 @@ menu.main-menu__items {
 nav {
 	@include media(xsm) {
 		display: none;
+		menu {
+			display: block !important;
+		}
 	}
 }
 
 nav.mobileMenuOpen {
 	position: fixed;
-	display: block;
+	display: grid;
+	grid-template-rows: auto max-content 1fr;
 	height: 100vh;
-	width: 70vw;
+	width: max-content;
 	top: 0;
-	left: 30%;
-
+	right: 0;
+	background: $white;
 	&::before {
 		position: fixed;
 		content: "";
