@@ -1,5 +1,10 @@
 # Nuxt3 - Decap CMS boilerplate
 
+**Live boilerplate example:** https://sailsnake-nuxt-decap-boilerplate.netlify.app
+
+
+**Link to repo:** https://github.com/Sfolkerts89/Nuxt3-starter__Decap-cm
+
 ## A simple starting point
 
 This boilerplate will get you going quick in building with Nuxt and Decap CMS. The base boilerplate consists out of the following:
