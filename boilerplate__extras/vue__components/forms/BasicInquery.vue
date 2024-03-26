@@ -1,32 +1,23 @@
 <template>
-	<div id="basic-inquery">
-		<form name="contact-formulier" class="form" method="POST" netlify netlify-honeypot="gotcha" action="/success">
-			<input type="hidden" name="form-name" value="contact-formulier" />
-			<fieldset>
-				<div class="gotcha--protectron">
-					<label>&#x26A0;<input name="gotcha" /> </label>
-				</div>
-				<h2>Get in touch</h2>
-				<FormsComponentsInputName @payload="validateInput" name="name" inputID="name" label="your name:"
-					class="input-name" required></FormsComponentsInputName>
-				<FormsComponentsInputEmail @payload="validateInput" name="email" inputID="email" label="email:"
-					class="input-email" required>
-				</FormsComponentsInputEmail>
-				<FormsComponentsInputSubject @payload="validateInput" name="subject" inputID="subject" label="subject"
-					class="input-subject" required></FormsComponentsInputSubject>
-				<FormsComponentsInputTextarea @payload="validateInput" :rows="4" name="message" inputID="message"
-					label="your message:" required></FormsComponentsInputTextarea>
-			</fieldset>
-			<fieldset>
-				<Button class="effect" type="submit" :class="submitActive ? 'enabled effect' : 'disabled'" :key="setLocale">{{ btnSend }}</Button>
-			</fieldset>
-		</form>
-	</div>
+	<form name="contact-form" class="form" method="POST" netlify netlify-honeypot="gotcha" action="/success">
+		<input type="hidden" name="form-name" value="contact-form" />
+		<fieldset>
+			<div class="gotcha--protectron">
+				<label>&#x26A0;<input name="gotcha" /> </label>
+			</div>
+			<FormsComponentsInputName @payload="validateInput" name="name" inputID="name" label="your name:"
+				class="input-name" required></FormsComponentsInputName>
+			<FormsComponentsInputEmail @payload="validateInput" name="email" inputID="email" label="email:"
+				class="input-email" required>
+			</FormsComponentsInputEmail>
+			<FormsComponentsInputTextarea @payload="validateInput" :rows="5" name="message" inputID="message"
+				label="your message:" required></FormsComponentsInputTextarea>
+		</fieldset>
+		<button type="submit" :class="submitActive ? 'enabled' : 'disabled'">{{ btnSend }}</button>
+	</form>
 </template>
 
 <script setup>
-
-const setLocale = useState("setLocale");
 
 const submitActive = ref(false);
 const formData = reactive([]);
@@ -60,63 +51,36 @@ function validateInput(payload) {
 fieldset {
 	display: grid;
 	column-gap: $spacing2;
-	font-size: 1.2em;
 
-	span {
-		display: block;
-		padding: $spacing1 $spacing2;
-		padding-top: $spacing2;
-		background: $white;
-		color: $black;
-		border-right: none;
-		margin-bottom: $spacing2;
+	.input-name,
+	.input-email {
+		grid-row: 2;
 	}
 
-	button.button {
-		top: $spacing3;
+	.input-name {
+		grid-column: 1;
 	}
-}
 
-@include media(xsm, sm) {
-	button.button {
+	.input-name {
+		grid-column: 2;
+	}
+
+	.input-type-textarea {
+		grid-column: 1 / 3;
 		grid-row: 4;
-		margin: auto;
 	}
+	@include media(xsm) {
+		display: block;
+		padding-inline: $spacing4;
+	}
+
 }
 
-@include media(sm, md) {
-	fieldset {
-		display: grid;
-		column-gap: $spacing2;
-		font-size: 1em;
-
-		span {
-			grid-column: 1 / 3;
-			grid-row: 1;
-		}
-
-		.input-name,
-		.input-email {
-			grid-row: 2;
-		}
-
-		.input-name {
-			grid-column: 1;
-		}
-
-		.input-name {
-			grid-column: 2;
-		}
-
-		.input-subject {
-			grid-column: 1 / 3;
-			grid-row: 3;
-		}
-
-		.input-type-textarea {
-			grid-column: 1 / 3;
-			grid-row: 4;
-		}
-	}
+button {
+	display: block;
+	margin-inline: auto;
+	margin-block: $spacing3;
+	background: $base-color;
 }
+
 </style>
