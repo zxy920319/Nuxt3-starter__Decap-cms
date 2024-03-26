@@ -8,20 +8,11 @@
 		<nav :class="{ mobileMenuOpen: mobileMenuActive }">
 
 			<menu class="main-menu__basic">
-				<span class="menu-type">Basic boilerplate menu: </span>
 				<NuxtLink to="/" class="menu-item item--home" prefetch>
 					<span>home</span>
 				</NuxtLink>
 				<NuxtLink to="/typography" class="menu-item" prefetch>
 					<span>typography</span>
-				</NuxtLink>
-			</menu>
-
-			<menu class="main-menu__boilerplate-extras">
-				<span class="menu-type">Boilerplate Extras menu: </span>
-				<NuxtLink v-for="link in links" :to="'/' + link" :class="['menu-item', 'item--' + link]"
-					@click="menuItemSelected">
-					<span>{{ link }}</span>
 				</NuxtLink>
 			</menu>
 		</nav>
@@ -39,10 +30,6 @@ watch(route, () => {
 
 function toggleMobileMenu() {
 	mobileMenuActive.value = !mobileMenuActive.value;
-}
-
-function menuItemSelected() {
-	mobileMenuActive.value = false;
 }
 
 watch(
@@ -63,16 +50,8 @@ nav {
 	}
 }
 
+
 .main-menu__basic {
-	--hover-background-color: #{$secondary-color};
-}
-
-.main-menu__boilerplate-extras {
-	--hover-background-color: #{$base-color};
-}
-
-.main-menu__basic,
-.main-menu__boilerplate-extras {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
@@ -96,16 +75,6 @@ nav {
 		}
 	}
 
-	.menu-type {
-		font-family: $font-accent;
-		margin-block: auto;
-		display: block;
-		width: 12em;
-		@include media(xsm) {
-			width: auto;
-		}
-	}
-
 	.menu-item {
 		cursor: pointer;
 		span {
@@ -113,10 +82,6 @@ nav {
 			text-align: center;
 			list-style: none;
 			transition: $transition1;
-			@include hover {
-				background: var(--hover-background-color);
-				color: $white;
-			}
 		}
 
 		@include media(xsm) {
@@ -124,22 +89,6 @@ nav {
 				outline: 0.3em solid var(--hover-background-color);
 			}
 		}
-	}
-}
-
-.main-menu__basic {
-	.menu-type {
-		background: $secondary-color;
-		color: $white;
-	}
-}
-
-.main-menu__boilerplate-extras {
-	color: $white;
-	background: $dark-grey;
-
-	.menu-type {
-		background: $base-color;
 	}
 }
 
