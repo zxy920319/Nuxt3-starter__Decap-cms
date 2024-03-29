@@ -160,7 +160,11 @@ content: >-
 
   ### vue__components/misc/ (folder)
 
+  * DynamicFields.vue:
   In here you will find the dynamicFields.vue component that corresponds with the 'dynamicFields.vue'. You will need this component to render the fields 'dynamic-fields' collection in dynamicFields.vue
+
+  * Copyright.vue:
+  A component displaying current year and your branding
   
 SEOmetaData:
   metaImage: https://decapcms.org/img/decap-logo.svg
