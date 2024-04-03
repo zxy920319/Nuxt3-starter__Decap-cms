@@ -38,10 +38,10 @@
 			// then check input validity
 			let isValid = input.checkValidity() === true ? true : false;
 			// and emit all data
-			emit('payload', { fieldLabel: label, fieldValue: this.inputValue, fieldValidity: isValid });
+			emit('payload', { fieldLabel: label, fieldValue: inputValue, fieldValidity: isValid });
 		} else {
 			// or emit only the inputID and inputValue
-			emit('payload', { fieldLabel: label, fieldValue: this.inputValue });
+			emit('payload', { fieldLabel: label, fieldValue: inputValue });
 		}
 	}
 </script>
