@@ -23,5 +23,7 @@ main {
 	div {
 		max-width: 50em;
 	}
+	// assets/scss/mixins
+	@include fade-in;
 }
 </style>
