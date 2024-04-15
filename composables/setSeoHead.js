@@ -15,8 +15,7 @@ export default function (seoData) {
     }) 
     useSeoMeta({
         title: seoData.metaTitle,
-        metaDescription: seoData.metaDescription,
-        metaImage: imageUrl,
+        description: seoData.metaDescription,
         keywords: seoData.keywords,
         ogTitle: seoData.metaTitle,
         ogDescription: seoData.metaDescription,
