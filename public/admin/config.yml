@@ -1,5 +1,5 @@
 # disable in production:  
-# local_backend: true
+local_backend: true
 # command to run a local Decap instance: npx-decap-server
 
 backend:
@@ -65,7 +65,6 @@ collections:
       - name: "home"
         label: "Home"
         file: "content/pages/home.md"
-        format: "frontmatter"
         fields:
           - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
@@ -73,9 +72,16 @@ collections:
       - name: "typography"
         label: "Typography"
         file: "content/pages/typography.md"
-        format: "frontmatter"
         fields:
           - { name: "title", label: "Title", widget: "string" }
+          - { name: "content", label: "Content", widget: "markdown" }
+      - name: "Fiddly diddlies"
+        label: "diddlies"
+        extension: json
+        file: "content/pages/fiddly-diddlies.json"
+        fields:
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "test-fields", label: "field objects test", widget: "string", default: "fields.title" }
           - { name: "content", label: "Content", widget: "markdown" }
      
 

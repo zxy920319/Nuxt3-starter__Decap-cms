@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import markdownParser from "@nuxt/content/transformers/markdown"
 
 // Massive thanks to: https://stackoverflow.com/questions/67012728/use-nuxt-content-to-display-markdown-fetched-from-a-database
@@ -18,4 +18,25 @@ watchEffect(async () => {
 
 <template>
   <ContentRendererMarkdown :value="record" v-if="record" />
+</template> -->
+
+
+
+<script setup>
+const props = defineProps({
+  markdownString: {
+    type: String,
+    required: true,
+  }
+});
+
+const r = mdToHtml(props.markdownString);
+
+// console.log(await r)
+
+</script>
+
+<template>
+  <!-- <pre>?: {{  r }}</pre> -->
+  <!-- <div v-html="r" /> -->
 </template>
