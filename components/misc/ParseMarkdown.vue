@@ -40,11 +40,12 @@ const props = defineProps({
 // 	console.log('hello?', div)
 // 	// }
 // })
-const test = await mdToHtml();
+const test = await mdToHtml(props.markdownString);
 
-console.log(test)
+// console.log(test)
 </script>
 
 <template>
 	<div id="me-here" v-html="test"></div>
+	<!-- {{  test }} -->
 </template>
