@@ -15,8 +15,6 @@ content: >-
 
   ### Decap CMS (config.yml)
 
-  * test
-
   * SEO anchor ready to go (simply use "- &seo" in any page/ file collection)
 
   * Cloudinary support
@@ -49,7 +47,7 @@ content: >-
 
   * setSeoHead() composable: just feed the SEOmetaData object (defined in config.yaml) from your api data; `setSeoHead(apiData.SEOmetaData)`
 
-  * useBtnData() composable: does an api call to /content/buttons.md and returns a single button string. Example **cosnt buttonText = useBtnData('buttonsApi.readmore')` => result: `"hello! Read moar!"`. Conistent button text's throughout your site when using `slot` in a `button.vue ** component
+  * useBtnData() composable: does an api call to /content/buttons.md and returns a single button string. Example `const buttonText = useBtnData('buttonsApi.readmore')` => result: `"hello! Read moar!"`. Conistent button text's throughout your site when using `slot` in a `button.vue` component
 
   ## Install
 
@@ -57,7 +55,7 @@ content: >-
 
   2. `yarn install` or `npm install`
 
-  4. Run frontend locally: `yarn dev' or `npm run dev'
+  4. Run frontend locally: `yarn dev` or `npm run dev`
 
   3. Boot up Decap CMS locally:
     * uncomment `locale_backend: true` (*leave this out in production for safety's sake*)
@@ -90,11 +88,11 @@ content: >-
 
   #### Contact.vue
   
-  Very simplistic contact page that includes the `<BasicInquery / >' component. Place the 'forms' folder in a corresponding 'components' folder in your project and uncomment for use.
+  Very simplistic contact page that includes the `<BasicInquery />' component. Place the 'forms' folder in a corresponding 'components' folder in your project and uncomment for use.
 
   #### dynamic-fields.vue
 
-  A page that utlizes the `< dynamicFields />` component. This works in relation with:
+  A page that utlizes the `<dynamicFields />` component. This works in relation with:
 
   * The Dynamic Fields anchor provided in: /decap__config/
   
@@ -133,7 +131,7 @@ content: >-
 
   Responsive image component based on Cloudinary transformations
 
-  #### Props
+  ##### Props
 
   * url (String): set up for filename only i.e. `"my-image.jpg"`
 
@@ -144,7 +142,7 @@ content: >-
   * Color (String): passes color to lightbox accent color
 
 
-  #### RespVideo.vue
+  ##### RespVideo.vue
 
   Responsive video component based on Cloudinary transformations
 
