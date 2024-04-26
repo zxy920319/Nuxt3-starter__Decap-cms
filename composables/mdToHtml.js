@@ -16,10 +16,25 @@ export default async function (md) {
             })
             function createParentElement(elB) {
                 let elInner = new String
+
+                // Returns <tag>value</tag> (or a linked version if tag === "a")
+                // function called later down the line
+                function toElementString(tag, value) {
+                    let tagStart = new String
+                    if(tag === "a") {
+                        tagStart = "<" + `${tag}` + ' href="' + `${value}` + '"' + ' target="_blank"' + ">"
+                    } else {
+                        tagStart = "<" + `${tag}` + ">"
+                    }
+                    const tagEnd = "</" + `${tag}` + ">"
+                    const res = tagStart + value + tagEnd
+                    return res
+                }
+
                 if (elB.value.length === 1) {
                     elInner = elB.value[0].value
                 } else {
-                    function createChildElement(elB) {            
+                    function createChildElement(elB) {
                         let childElementAsString = new String
                         for (let i = 0; i < elB.length; i++) {
                             if (elB[i].type === "text") {
@@ -27,20 +42,14 @@ export default async function (md) {
                             }
                             else {
                                 elInner = createChildElement(elB[i].children);
-                                const tagStart = "<" + `${elB[i].tag}` + ">"
-                                const tagEnd = "</" + `${elB[i].tag}` + ">"
-                                const resC = tagStart + elInner + tagEnd
-                                childElementAsString += resC
+                                childElementAsString += toElementString(elB[i].tag, elInner);
                             }
                         }
                         return childElementAsString
                     }
                     elInner = createChildElement(elB.value)
                 }
-                const tagStart = "<" + `${elB.tag}` + ">"
-                const tagEnd = "</" + `${elB.tag}` + ">"
-                const res = tagStart + elInner + tagEnd
-                return res
+                return toElementString(elB.tag, elInner);
             }
             htmlString += createParentElement(elAO)
         }
