@@ -15,6 +15,8 @@ content: >-
 
   ### Decap CMS (config.yml)
 
+  * test
+
   * SEO anchor ready to go (simply use "- &seo" in any page/ file collection)
 
   * Cloudinary support
@@ -47,11 +49,11 @@ content: >-
 
   * setSeoHead() composable: just feed the SEOmetaData object (defined in config.yaml) from your api data; `setSeoHead(apiData.SEOmetaData)`
 
-  * useBtnData() composable: does an api call to /content/buttons.md and returns a single button string. Example `cosnt buttonText = useBtnData('buttonsApi.readmore')` => result: `"hello! Read moar!"`. Conistent button text's throughout your site when using `slot` in a `button.vue` component
+  * useBtnData() composable: does an api call to /content/buttons.md and returns a single button string. Example **cosnt buttonText = useBtnData('buttonsApi.readmore')` => result: `"hello! Read moar!"`. Conistent button text's throughout your site when using `slot` in a `button.vue ** component
 
   ## Install
 
-  1. Clone this repo: `git clone https://github.com/Sfolkerts89/Nuxt3-starter__Decap-cms.git' or click 'Use this template'
+  1. Clone this repo: `git clone https://github.com/Sfolkerts89/Nuxt3-starter__Decap-cms.git` or click 'Use this template'
 
   2. `yarn install` or `npm install`
 
@@ -88,13 +90,14 @@ content: >-
 
   #### Contact.vue
   
-  Very simplistic contact page that includes the `<BasicInquery />' component. Place the 'forms' folder in a corresponding 'components' folder in your project and uncomment for use.
+  Very simplistic contact page that includes the `<BasicInquery / >' component. Place the 'forms' folder in a corresponding 'components' folder in your project and uncomment for use.
 
   #### dynamic-fields.vue
 
-  A page that utlizes the `<dynamicFields />` component. This works in relation with:
+  A page that utlizes the `< dynamicFields />` component. This works in relation with:
 
   * The Dynamic Fields anchor provided in: /decap__config/
+  
   * The Dynamic Fields collection provided in: /decap__config/
   
   #### Products.vue
