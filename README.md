@@ -1,4 +1,6 @@
+
 # Nuxt3 - Decap CMS boilerplate
+
 
 **Live boilerplate example:** https://sailsnake-nuxt-decap-boilerplate.netlify.app
 
@@ -37,37 +39,38 @@ This boilerplate will get you going quick in building with Nuxt and Decap CMS. T
 
 * Layout components (logo, header, footer) already called in layout/default.vue
 
-* A markdown render component (based off the Nuxt Content module) that can render any markdown string
+* A markdown render component that renders markdown to an HTML string server side 
 
-### Composables
+### Composables:
+
+* mdToHtml() composable: uses Nuxt/Content/MDC renderer. This first renders an HTML object from markdown input and returns the HTML object as a single string. This renders server side ;)
 
 * setSeoHead() composable: just feed the SEOmetaData object (defined in config.yaml) from your api data; `setSeoHead(apiData.SEOmetaData)`
 
-* useBtnData() composable: does an api call to /content/buttons.md and returns a single button string. Example `cosnt buttonText = useBtnData('buttonsApi.readmore')` => result: `"hello! Read moar!"`. Conistent button text's throughout your site when using `slot` in a `button.vue` component
+* useBtnData() composable: does an api call to /content/buttons.md and returns a single button string. Example `const buttonText = useBtnData('buttonsApi.readmore')` => result: `"hello! Read moar!"`. Conistent button text's throughout your site when using `slot` in a `button.vue` component
 
 ## Install
 
-1. Clone this repo: `git clone <https://github.com/Sfolkerts89/Nuxt3-starter__Decap-cms.git>' or click 'Use this template'
+1. Clone this repo: `git clone https://github.com/Sfolkerts89/Nuxt3-starter__Decap-cms.git` or click 'Use this template'
 
-2. `yarn install` or `npm install`.
+2. `yarn install` or `npm install`
 
-4. Run frontend locally: `yarn dev' or`npm run dev'
+4. Run frontend locally: `yarn dev` or `npm run dev`
 
 3. Boot up Decap CMS locally:
-
-* uncomment `locale_backend: true` (*leave this out in production for safety's sake*)
-* run `npx decap-server`
-* Navigate to: localhost:3000/admin (asuming you have a frontend instance running)
+  * uncomment `locale_backend: true` (*leave this out in production for safety's sake*)
+  * run `npx decap-server`
+  * Navigate to: localhost:3000/admin (asuming you have a frontend instance running)
 
 ## Netlify deployment
-
-* Build command: `npm run generate` (dont use YARN: Node will run out of memory)
-* Publish directory: `dist`
+  * Build command: `npm run generate` (dont use YARN: Node will run out of memory)
+  * Publish directory: `dist`
 
 ## Boilerplate__extras/ (folder)
 
 I found it tough to decide wether to build an extranous boilerplate packed with features or to keep it clean and simple.. So i did both..
 Addtional code snippets, components and more can be found in the folder 'boilerplate__extras'. If you want to start clean and simple, just delete the folder!
+
 
 ### /decap__config/
 
@@ -92,15 +95,16 @@ Very simplistic contact page that includes the `<BasicInquery />' component. Pla
 A page that utlizes the `<dynamicFields />` component. This works in relation with:
 
 * The Dynamic Fields anchor provided in: /decap__config/
+
 * The Dynamic Fields collection provided in: /decap__config/
 
 #### Products.vue
 
-A simple page displays all the products in the products collection.
+A simple page displays all the products in the products collection. 
 
 ### vue__components/forms/
 
-In this folder you will find modular form building components. Along with a simple contact form that utilizes a few of these.
+In this folder you will find modular form building components. Along with a simple contact form that utilizes a few of these. 
 Aside from being modular, the simple contact form has form input validation:
 
 1. Input field validation happens in the child component
@@ -111,7 +115,7 @@ Aside from being modular, the simple contact form has form input validation:
 
 ### /vue__components/media/
 
-#### Carousel.vue component with the following options via props
+#### Carousel.vue component with the following options via props:
 
 * imageOnly (Boolean): enable only an array of image links are provided
 
@@ -127,7 +131,7 @@ Aside from being modular, the simple contact form has form input validation:
 
 Responsive image component based on Cloudinary transformations
 
-#### RespImage.vue Props
+##### Props
 
 * url (String): set up for filename only i.e. `"my-image.jpg"`
 
@@ -137,11 +141,12 @@ Responsive image component based on Cloudinary transformations
 
 * Color (String): passes color to lightbox accent color
 
-#### RespVideo.vue
+
+##### RespVideo.vue
 
 Responsive video component based on Cloudinary transformations
 
-#### RespVideo.vue Props
+#### Props
 
 * url (String): set up for filename only i.e. `"my-image.jpg"`
 
@@ -153,6 +158,7 @@ Responsive video component based on Cloudinary transformations
 
 * id (String):  the autoplay in view feature needs an element id to work. The video is is built using `:id` + `props.url.slice(-10)` (ensures unique id's per page)
 
+
 ### vue__components/misc/ (folder)
 
 * DynamicFields.vue:
@@ -160,3 +166,10 @@ In here you will find the dynamicFields.vue component that corresponds with the 
 
 * Copyright.vue:
 A component displaying current year and your branding
+
+SEOmetaData:
+metaImage: https://decapcms.org/img/decap-logo.svg
+metaDescription: Get set up quickly with this Nuxt3 - Decap CMS boilerplate
+metaTitle: Nuxt3 - Decap CMS boilerplate
+keywords: nuxt, nuxt3, decap cms, decap, netlify, netlify cms, boilerplate
+
