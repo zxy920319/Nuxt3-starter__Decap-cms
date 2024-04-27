@@ -41,9 +41,11 @@ content: >-
 
   * Layout components (logo, header, footer) already called in layout/default.vue
 
-  * A markdown render component (based off the Nuxt Content module) that can render any markdown string
+  * A markdown render component that renders markdown to an HTML string server side 
 
   ### Composables:
+
+  * mdToHtml() composable: uses Nuxt/Content/MDC renderer. This first renders an HTML object from markdown input and returns the HTML object as a single string. This renders server side ;)
 
   * setSeoHead() composable: just feed the SEOmetaData object (defined in config.yaml) from your api data; `setSeoHead(apiData.SEOmetaData)`
 
