@@ -3,7 +3,7 @@ import { parseMarkdown } from '@nuxtjs/mdc/runtime'
 export default async function (md) {
     const rawMd = await useAsyncData('markdown', () => parseMarkdown(md))
     // // Iterate to get the array of elAements returned by parseMarkdown
-    const result = await rawMd.data.value.body.children
+    const htmlObjectFromrawMd = await rawMd.data.value.body.children
     // htmlString will be populated with recursive functions and returned in the end
     let htmlString = ""
 
@@ -54,7 +54,7 @@ export default async function (md) {
             htmlString += createParentElement(elAO)
         }
     }
-    markdownToHtmlLoop(result)
+    markdownToHtmlLoop(htmlObjectFromrawMd)
     // Return the entire HTML object as a single string; mount as you wish
     return htmlString
 }
