@@ -20,7 +20,7 @@ main {
 	display: grid;
 	justify-items: center;
 	align-items: center;
-	div {
+	:deep(div) {
 		max-width: 50em;
 	}
 	// assets/scss/mixins

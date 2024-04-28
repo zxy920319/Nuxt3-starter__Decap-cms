@@ -20,7 +20,7 @@ main {
 	justify-items: center;
 	align-items: center;
 
-	div {
+	:deep(div) {
 		max-width: 500px;
 	}
 }
