@@ -41,7 +41,7 @@ content: >-
 
   * Layout components (logo, header, footer) already called in layout/default.vue
 
-  * A markdown render component that renders markdown to an HTML string server side 
+  * A markdown render component that renders markdown to an HTML string server side (NOTE: it is harnessing an experimental feature 'islandComponents'; to remove set: nuxt.config.ts: islandComponents =>  false, remove the '.server' suffix from ParseMarkdown.server.vue)
 
   ### Composables:
 

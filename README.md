@@ -1,4 +1,3 @@
-
 # Nuxt3 - Decap CMS boilerplate
 
 
@@ -39,7 +38,7 @@ This boilerplate will get you going quick in building with Nuxt and Decap CMS. T
 
 * Layout components (logo, header, footer) already called in layout/default.vue
 
-* A markdown render component that renders markdown to an HTML string server side 
+* A markdown render component that renders markdown to an HTML string server side (NOTE: it is harnessing an experimental feature 'islandComponents'; to remove set: nuxt.config.ts: islandComponents =>  false, remove the '.server' suffix from ParseMarkdown.server.vue)
 
 ### Composables:
 
@@ -166,10 +165,3 @@ In here you will find the dynamicFields.vue component that corresponds with the 
 
 * Copyright.vue:
 A component displaying current year and your branding
-
-SEOmetaData:
-metaImage: https://decapcms.org/img/decap-logo.svg
-metaDescription: Get set up quickly with this Nuxt3 - Decap CMS boilerplate
-metaTitle: Nuxt3 - Decap CMS boilerplate
-keywords: nuxt, nuxt3, decap cms, decap, netlify, netlify cms, boilerplate
-
