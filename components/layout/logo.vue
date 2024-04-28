@@ -5,18 +5,18 @@
 	>
 		<NuxtLink to="https://nuxt.com" target="_blank">
 			<img
-				src="/images/header/nuxt-logo.svg"
+				src="/images/logos/nuxt-logo.svg"
 				alt="logo"
-				width="200"
-				height="100"
+				width="800"
+				height="200"
 			/>
 		</NuxtLink>
 		<NuxtLink to="https://decapcms.org" target="_blank">
 			<img
-				src="/images/header/decap-logo.svg"
+				src="/images/logos/decap-logo.svg"
 				alt="logo"
-				width="200"
-				height="100"
+				width="104"
+				height="30"
 			/>
 		</NuxtLink>
 		<span>Boilerplate</span>
