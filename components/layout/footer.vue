@@ -4,8 +4,8 @@
 			id="__by-sailsnake"
 		>
 			<p>build by:</p>
-			<a href="http://www.sailsnake.com" target="_blank">
-				<img src="/images/header/Sailsnake-logo.png" />
+			<a href="http://www.sailsnake.com" target="_blank" aria-label="link to www.sailsnake.com">
+				<img src="/images/logos/Sailsnake-logo--footer.png" width="941" height="408" alt="Sailsnake creative studio - logo "/>
 			</a
 			>
 		</div>
@@ -57,6 +57,7 @@
 			img {
 				height: $font-size5;
 				width: auto;
+				aspect-ratio: 941 / 408;
 			}
 		}
 	}
