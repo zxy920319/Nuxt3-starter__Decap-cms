@@ -39,7 +39,11 @@ export default async function (md) {
         let tagStart = new String
         if (tag === "a") {
             tagStart = "<" + `${tag}` + ' href="' + `${value}` + '"' + ' target="_blank"' + ">"
-        } else {
+        } if(tag === "br") {
+            // console.log("yes")
+            // do nothing: stop tagStart from rendering a 'second' </br>
+        } 
+        else {
             tagStart = "<" + `${tag}` + ">"
         }
         const tagEnd = "</" + `${tag}` + ">"
