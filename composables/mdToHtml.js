@@ -4,7 +4,8 @@ import { parseMarkdown } from '@nuxtjs/mdc/runtime'
 export default async function (md) {
     const cEnv = useRuntimeConfig().public.cloudinaryEnvUrl + '/'
     // console.log("yes?", cEnv)
-    const rawMd = await useAsyncData(Math.random().toString(), () => parseMarkdown(md))
+    const key = Math.random().toFixed(2).toString() + 'markdownKey'
+    const rawMd = await useAsyncData(`key`, () => parseMarkdown(md))
     // // Iterate to get the array of elAements returned by parseMarkdown
     const htmlObjectFromrawMd = await rawMd.data.value.body.children
     // htmlString will be populated with recursive functions and returned in the end
