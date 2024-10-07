@@ -4,13 +4,13 @@ import { parseMarkdown } from '@nuxtjs/mdc/runtime'
 export default async function (md) {
     const cEnv = useRuntimeConfig().public.cloudinaryEnvUrl + '/'
     // console.log("yes?", cEnv)
-    const rawMd = await useAsyncData(Math.random(), () => parseMarkdown(md))
+    const rawMd = await useAsyncData(Math.random().toString(), () => parseMarkdown(md))
     // // Iterate to get the array of elAements returned by parseMarkdown
     const htmlObjectFromrawMd = await rawMd.data.value.body.children
     // htmlString will be populated with recursive functions and returned in the end
     let htmlString = ""
 
-    console.log("htmlObjectFromrawMd", htmlObjectFromrawMd)
+    // console.log("htmlObjectFromrawMd", htmlObjectFromrawMd)
     // THE FUNCTIONS in order from parent > child > value (Object > key, value)
 
     //-- 1.1
@@ -41,7 +41,7 @@ export default async function (md) {
                 childElementAsString += toElementString(elB[i].tag, elInner);
             }
         }
-        console.log("// return from 1.2: ", childElementAsString)
+        // console.log("// return from 1.2: ", childElementAsString)
         return childElementAsString
     }
 
