@@ -2,17 +2,14 @@
 	<div id="main-menu">
 		<div id="mobile-menu__toggle-button" @click="toggleMobileMenu()" :class="{ mobileMenuOpen: mobileMenuActive }">
 			<span>&#x2630;</span>
-			MENU 
+			{{ t[locale]['menu'] }}
 		</div>
 
 		<nav :class="{ mobileMenuOpen: mobileMenuActive }">
 
 			<menu class="main-menu__basic">
-				<NuxtLink to="/" class="menu-item item--home" prefetch>
-					<span>home</span>
-				</NuxtLink>
-				<NuxtLink to="/typography" class="menu-item" prefetch>
-					<span>typography</span>
+				<NuxtLink :to="{ name: 'index' , query: route.query}" class="menu-item item--home">
+					<span>{{ t[locale]['home'] }}</span>
 				</NuxtLink>
 			</menu>
 		</nav>
@@ -20,6 +17,14 @@
 </template>
 
 <script setup>
+import { useLocaleStore } from '@/store/locale';
+import { storeToRefs } from 'pinia'
+
+const store = useLocaleStore()
+const { locale } = storeToRefs(store)
+
+const { data: t } = await useAsyncData("lang", () =>
+	queryContent("/i18n/locales").findOne())
 
 const links = ["products", "dynamic-fields", "contact"];
 const mobileMenuActive = ref(false);
@@ -45,6 +50,7 @@ watch(
 <style lang="scss" scoped>
 nav {
 	display: grid;
+
 	@include media(xsm) {
 		padding-top: 8em; // pushes item below 'header' (toggle-button span:before)
 	}
@@ -70,6 +76,7 @@ nav {
 	span {
 		padding: $spacing2;
 		width: 8em;
+
 		@include media(xsm) {
 			width: auto;
 		}
@@ -77,6 +84,7 @@ nav {
 
 	.menu-item {
 		cursor: pointer;
+
 		span {
 			display: block;
 			text-align: center;
@@ -98,6 +106,7 @@ nav {
 nav {
 	@include media(xsm) {
 		display: none;
+
 		menu {
 			display: block !important;
 		}
@@ -113,6 +122,7 @@ nav.mobileMenuOpen {
 	top: 0;
 	right: 0;
 	background: $white;
+
 	&::before {
 		position: fixed;
 		content: "";
@@ -126,6 +136,7 @@ nav.mobileMenuOpen {
 #mobile-menu__toggle-button {
 	display: none;
 	cursor: pointer;
+
 	@include media(xsm) {
 		position: absolute;
 		z-index: 99;
@@ -139,6 +150,7 @@ nav.mobileMenuOpen {
 		margin-top: $spacing0;
 		right: 0;
 	}
+
 	span {
 		font-size: $font-size2;
 		display: block;

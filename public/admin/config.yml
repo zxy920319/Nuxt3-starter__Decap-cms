@@ -23,6 +23,10 @@ seo: &seo
     - { name: "metaImage", label: "SEO image", widget: "image"}
     - { name: "keywords", label: "keywords", widget: "string", hint: "keywords are comma seperated", required: false }
 
+i18n:
+  structure: multiple_folders
+  locales: [en, zh]
+  default_locale: zh
 
 
 collections:
@@ -56,7 +60,7 @@ collections:
     description: >
       The description is a great place for tone setting, high level information, and editing
       guidelines that are specific to a collection.
-    folder: '_posts'
+    folder: 'content/posts'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
     create: true # Allow users to create new documents in this collection
@@ -97,13 +101,17 @@ collections:
   # SINGLE PAGES
   - name: "pages"
     label: "Pages"
+    i18n:
+      structure: single_file
+      locales: [en, zh]
     files:
       - name: "home"
         label: "Home"
         file: "content/pages/home.md"
+        i18n: true
         fields:
-          - { name: "title", label: "Title", widget: "string" }
-          - { name: "content", label: "Content", widget: "markdown" }
+          - { name: "title", label: "Title", widget: "string", i18n: true }
+          - { name: "content", label: "Content", widget: "markdown", i18n: duplicate }
           - *seo
       - name: "typography"
         label: "Typography"

@@ -3,15 +3,15 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: "en",
+        lang: "zh",
       },
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "Nuxt & Decap CMS boilerplate",
+      title: "FCPAE",
     },
   },
 
-  modules: ["@nuxt/content"],
+  modules: ["@nuxt/content", "@pinia/nuxt"],
 
   content: {
     markdown: {
