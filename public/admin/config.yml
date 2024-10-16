@@ -1,4 +1,4 @@
-# disable in production:  
+# disable in production:
 # local_backend: true
 # command to run a local Decap instance: npx-decap-server
 
@@ -17,35 +17,53 @@ seo: &seo
   label: "SEO"
   widget: "object"
   collapsed: true
-  fields: 
-    - { name: "metaTitle", label: "SEO Title", widget: "string", default: "{{ title }}", required: true }
-    - { name: "metaDescription", label: "SEO Description", widget: "string", pattern: [".{20,160}", "between 20 and 160 characters"], required: true, hint: "must be between 20 and 160 characters" }
-    - { name: "metaImage", label: "SEO image", widget: "image"}
-    - { name: "keywords", label: "keywords", widget: "string", hint: "keywords are comma seperated", required: false }
+  fields:
+    - {
+        name: "metaTitle",
+        label: "SEO Title",
+        widget: "string",
+        default: "{{ title }}",
+        required: true,
+      }
+    - {
+        name: "metaDescription",
+        label: "SEO Description",
+        widget: "string",
+        pattern: [".{20,160}", "between 20 and 160 characters"],
+        required: true,
+        hint: "must be between 20 and 160 characters",
+      }
+    - { name: "metaImage", label: "SEO image", widget: "image" }
+    - {
+        name: "keywords",
+        label: "keywords",
+        widget: "string",
+        hint: "keywords are comma seperated",
+        required: false,
+      }
 
 i18n:
   structure: multiple_folders
   locales: [en, zh]
   default_locale: zh
 
-
 collections:
   - name: "globalContent"
     label: "global content"
-    files: 
+    files:
       - label: "buttons"
         name: "buttons"
-        file: "content/site/buttons.md"    
-        fields: 
+        file: "content/site/buttons.md"
+        fields:
           - label: "next"
             name: "next"
-            widget: "string"        
+            widget: "string"
           - label: "previous"
             name: "previous"
-            widget: "string"        
+            widget: "string"
           - label: "close"
             name: "close"
-            widget: "string"        
+            widget: "string"
           - label: "article: more"
             name: "article"
             widget: "string"
@@ -54,20 +72,21 @@ collections:
             name: "send"
             widget: "string"
 
-  - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
-    label: 'Posts' # Used in the UI
-    label_singular: 'Post' # Used in the UI, ie: "New Post"
+  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Posts" # Used in the UI
+    label_singular: "Post" # Used in the UI, ie: "New Post"
+    format: "frontmatter"
     description: >
       The description is a great place for tone setting, high level information, and editing
       guidelines that are specific to a collection.
-    folder: 'content/posts'
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+    folder: "content/posts"
+    slug: "{{slug}}"
+    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
     create: true # Allow users to create new documents in this collection
     view_filters:
       - label: Posts With Index
         field: title
-        pattern: 'This is post #'
+        pattern: "This is post #"
       - label: Posts Without Index
         field: title
         pattern: front matter post
@@ -81,29 +100,49 @@ collections:
       - label: Drafts
         field: draft
     fields: # The fields each document in this collection have
-      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'datetime',
-          format: 'YYYY-MM-DD HH:mm',
-          default: '{{now}}',
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          pattern:
+            [
+              "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "A slug can have no spaces or special characters",
+            ],
+          required: true,
         }
-      - label: 'Cover Image'
-        name: 'image'
-        widget: 'image'
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD HH:mm",
+          default: "{{now}}",
+        }
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
         required: false
-        tagname: ''
+        tagname: ""
 
-      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
-      
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          hint: "Main content goes here.",
+        }
+
   # SINGLE PAGES
   - name: "pages"
     label: "Pages"
+    create: true
     i18n:
       structure: single_file
       locales: [en, zh]
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "content", label: "Content", widget: "markdown" }
     files:
       - name: "home"
         label: "Home"
@@ -111,15 +150,23 @@ collections:
         i18n: true
         fields:
           - { name: "title", label: "Title", widget: "string", i18n: true }
-          - { name: "content", label: "Content", widget: "markdown", i18n: duplicate }
+          - {
+              name: "content",
+              label: "Content",
+              widget: "markdown",
+              i18n: duplicate,
+            }
           - *seo
-      - name: "typography"
-        label: "Typography"
-        file: "content/pages/typography.md"
+      - name: "about"
+        label: "About Us"
+        file: "content/pages/about.md"
+        i18n: true
         fields:
-          - { name: "title", label: "Title", widget: "string" }
-          - { name: "content", label: "Content", widget: "markdown" }
-     
-
-          
-
+          - { name: "title", label: "Title", widget: "string", i18n: true }
+          - {
+              name: "content",
+              label: "Content",
+              widget: "markdown",
+              i18n: true,
+            }
+          - *seo

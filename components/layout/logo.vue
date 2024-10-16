@@ -3,7 +3,7 @@
 		id="header__logo"
 		class="company-logo"
 	>
-		<NuxtLink to="#">
+		<NuxtLink to="/">
 			<img
 				src="/images/upload/640.jpg"
 				alt="logo"

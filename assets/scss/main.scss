@@ -79,6 +79,16 @@ body * {
 				color: $base-color;
 			}
 		}
+		.ant-layout-content {
+			display: flex;
+			justify-content: center;
+			align-items: start;
+			opacity: 0;
+			animation: fade-in-02281a80 2s ease 0s forwards;
+			#markdown-to-html {
+				max-width: 50em;
+			}
+		}
 	}
 	footer {
 		grid-row: 3;

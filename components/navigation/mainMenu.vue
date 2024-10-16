@@ -11,6 +11,12 @@
 				<NuxtLink :to="{ name: 'index' , query: route.query}" class="menu-item item--home">
 					<span>{{ t[locale]['home'] }}</span>
 				</NuxtLink>
+				<NuxtLink :to="{ name: 'about' , query: route.query}" class="menu-item item--home">
+					<span>{{ t[locale]['about'] }}</span>
+				</NuxtLink>
+				<NuxtLink :to="{ name: 'posts' , query: route.query}" class="menu-item item--home">
+					<span>{{ t[locale]['posts'] }}</span>
+				</NuxtLink>
 			</menu>
 		</nav>
 	</div>

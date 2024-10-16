@@ -41,16 +41,3 @@ main {
 	@include fade-in;
 }
 </style>
-
-<script>
-export default {
-	async asyncData({ $content }) {
-		const posts = await $content("posts").fetch();
-		console.log('posts', posts);
-
-		return {
-			posts,
-		};
-	},
-};
-</script>
