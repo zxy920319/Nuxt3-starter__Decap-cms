@@ -7,7 +7,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 media_folder: "public/images/upload"
-public_folder: "images/upload"
+public_folder: "/images/upload"
 
 site_url: https://chic-tulumba-6f8d9a.netlify.app
 
