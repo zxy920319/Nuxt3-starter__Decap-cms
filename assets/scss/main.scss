@@ -1,97 +1,96 @@
 html * {
-	/* https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	/* https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
-	margin: 0;
-	font-size: 15px; // 11pt
-	font-family: $font-main;
-	// responsive upscaling for resolutions > 1920px
-	@include media(xlg) {
-		font-size: clamp(15px, 0rem + 0.7813vw, 30px);
-	}
+  margin: 0;
+  font-size: 15px; // 11pt
+  font-family: $font-main;
+  // responsive upscaling for resolutions > 1920px
+  @include media(xlg) {
+    font-size: clamp(15px, 0rem + 0.7813vw, 30px);
+  }
 }
 
-// SCROLLBAR 
+// SCROLLBAR
 body {
-	scrollbar-width: none;
-	// Firefox
-	-ms-overflow-style: none;
-	// Internet Explorer 10+
+  scrollbar-width: none;
+  // Firefox
+  -ms-overflow-style: none;
+  // Internet Explorer 10+
 }
 
 body::-webkit-scrollbar {
-	// WebKit
-	width: 0;
-	height: 0;
+  // WebKit
+  width: 0;
+  height: 0;
 }
 
-// Works on Firefox 
+// Works on Firefox
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* GRID layout with fixed header*/
 
 html,
 body {
-	height: 100vh;
-	width: 100%;
-	//==
-	margin: 0;
-	padding: 0;
-	//==
-	font-family: $font-main;
+  height: 100vh;
+  width: 100%;
+  //==
+  margin: 0;
+  padding: 0;
+  //==
+  font-family: $font-main;
 }
 
 body * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .layout-wrapper {
-	position: relative;
-	width: 100%;
-	min-height: 100vh;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: max-content minmax(0, 1fr) max-content;
-	header {
-		grid-row: 1;
-	}
-	.page-wrapper {
-		position: relative;
-		grid-row: 2;
-		main {
-			min-height: 100%;
-			padding: $spacing6;
-			@include media(xsm) {
-				padding-inline: $spacing2;
-			}
-			a {
-				color: $base-color;
-			}
-		}
-		.ant-layout-content {
-			display: flex;
-			justify-content: center;
-			align-items: start;
-			animation: fade-in 2s ease 0s forwards;
-			#markdown-to-html {
-				max-width: 50em;
-			}
-		}
-	}
-	footer {
-		grid-row: 3;
-	}
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content minmax(0, 1fr) max-content;
+  header {
+    grid-row: 1;
+  }
+  .page-wrapper {
+    position: relative;
+    grid-row: 2;
+    main {
+      min-height: 100%;
+      padding: $spacing6;
+      @include media(xsm) {
+        padding-inline: $spacing2;
+      }
+      a {
+        color: $base-color;
+      }
+    }
+    .ant-layout-content {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      animation: fade-in 2s ease 0s forwards;
+      .posts-wrapper,
+      #markdown-to-html {
+        max-width: 70em;
+      }
+    }
+  }
+  footer {
+    grid-row: 3;
+  }
 }
-
-

@@ -19,7 +19,7 @@ en:
     Since its inception, the Federation has grown from 10 member associations to 62, with associations spanning countries such as Germany, the United Kingdom, France, the Netherlands, Belgium, Austria, Italy, Ireland, Spain, Switzerland, Sweden, Denmark, and Finland. Collectively, these member associations represent more than 20,000 Chinese professionals working in various industries across Europe.
 
 
-    The organizational structure of the Federation is modeled after the European Union, with the chair association and chair country rotating annually. However, unlike the EU, the chair association and chair country are not rotated in a fixed order but are elected democratically at the Federation's annual meeting. The 2023/2024 Executive Council members include rotating chair Ding Li, President (Legal Representative) Song Zhiwei, Secretary-General Liu Xiaoling, Treasurer Li Li, and Executive Deputy Secretary-General Luo Kai.
+    The organizational structure of the Federation is modeled after the European Union, with the chair association and chair country rotating annually. However, unlike the EU, the chair association and chair country are not rotated in a fixed order but are elected democratically at the Federation's annual meeting. The 2023/2024 Executive Council members include rotating chair Ding Li, President Song Zhiwei, Secretary-General Liu Xiaoling, Treasurer Li Li, and Executive Deputy Secretary-General Luo Kai.
 
 
 
@@ -42,7 +42,7 @@ zh:
     欧联会汇聚了遍布欧洲十多个国家的华人专业协会和机构。自成立以来，以各协会会长和理事会为核心，积极开展各类交流活动，组织回国考察访问超过百次，先后建立了济南欧亚科技创业基地和徐州海外科技创业基地。欧联会还在欧洲和中国举办了数十场国际学术研讨会，组织多项公益活动，并成功在巴黎、哥本哈根、布鲁塞尔、维也纳、海牙、法兰克福、赫尔辛基、都柏林、汉堡等城市举办了 14 届《FCPAE 欧洲论坛》。这些活动得到了欧洲、世界其他国家及欧盟、联合国相关机构的热情关注和积极参与。
 
 
-    联合会自成立时的 10 个会员协会，已发展壮大到现在的 62 个，会员协会分布在德国、英国、法国、荷兰、比利时、奥地利、意大利、爱尔兰、西班牙、瑞士、瑞典、丹麦、芬兰等国，汇聚了遍布欧洲各行业的 2 万多名华人华侨专业人士。联合会的组织结构借鉴了欧盟模式，每年由不同国家的主席协会和主席国轮值。然而，与欧盟不同的是，主席协会和主席国并非按固定顺序轮换，而是在联合会的年度会议上通过民主选举产生。2023-2024 年度的常务理事会成员包括轮值主席丁力，主席（法人代表）宋志伟，秘书长刘晓玲，财务长李立，以及常务副秘书长罗恺。
+    联合会自成立时的 10 个会员协会，已发展壮大到现在的 62 个，会员协会分布在德国、英国、法国、荷兰、比利时、奥地利、意大利、爱尔兰、西班牙、瑞士、瑞典、丹麦、芬兰等国，汇聚了遍布欧洲各行业的 2 万多名华人华侨专业人士。联合会的组织结构借鉴了欧盟模式，每年由不同国家的主席协会和主席国轮值。然而，与欧盟不同的是，主席协会和主席国并非按固定顺序轮换，而是在联合会的年度会议上通过民主选举产生。2023-2024 年度的常务理事会成员包括轮值主席丁力，主席宋志伟，秘书长刘晓玲，财务长李立，以及常务副秘书长罗恺。
 
 
 

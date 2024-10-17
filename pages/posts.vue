@@ -13,26 +13,10 @@
 <script setup>
 import { LayoutContent as ALayoutContent, Card as ACard } from 'ant-design-vue'
 
-const { data: posts } = reactive(await useAsyncData("posts", () => queryContent("posts").find()))
-console.log(posts);
+const { data: posts } = reactive(await useAsyncData("posts", () => queryContent("posts").where({ draft: false }).sort({ pin: 1 }).find()))
 
 </script>
 
-<!-- <script>
-import { LayoutContent as ALayoutContent, Card as ACard } from 'ant-design-vue'
-
-export default {
-    components: { ALayoutContent, ACard },
-    async asyncData({ $content }) {
-        const posts = await $content("posts").fetch();
-        console.log('posts', posts);
-
-        return {
-            posts,
-        };
-    },
-};
-</script> -->
 <style lang="scss" scoped>
 .posts-wrapper {
     display: flex;

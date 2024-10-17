@@ -17,13 +17,7 @@ const { data: home } = reactive(await useAsyncData("home", () =>
 	queryContent("/pages/home").findOne())
 );
 
-if (home.SEOmetaData) setSeoHead(home.SEOmetaData);
-
-// const { data } = await useAsyncData("posts", () => {
-// 	const data = queryContent("posts");
-// 	console.log(data);
-// 	return data.find();
-// })
+setSeoHead(home.en.SEOmetaData);
 
 </script>
 
