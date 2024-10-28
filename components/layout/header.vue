@@ -47,6 +47,7 @@ function handleMenuClick(lang) {
 	grid-template-columns: 1fr auto 1fr;
 	grid-template-rows: 1fr;
 	padding: $spacing2;
+	// background-color: #006c96;
 
 	&::before {
 		position: absolute;

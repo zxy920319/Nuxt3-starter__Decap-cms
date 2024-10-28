@@ -69,11 +69,14 @@ body * {
   .page-wrapper {
     position: relative;
     grid-row: 2;
+    margin-top: 1.5px;
     main {
       min-height: 100%;
-      padding: $spacing6;
       @include media(xsm) {
         padding-inline: $spacing2;
+      }
+      .content {
+        padding: $spacing6 0;
       }
       a {
         color: $base-color;
@@ -82,12 +85,19 @@ body * {
     .ant-layout-content {
       display: flex;
       justify-content: center;
-      align-items: start;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
       animation: fade-in 2s ease 0s forwards;
-      .posts-wrapper,
+      padding: $spacing6;
       #markdown-to-html {
         max-width: 70em;
       }
+    }
+  }
+  #markdown-to-html {
+    h2 {
+      text-align: center;
     }
   }
   footer {

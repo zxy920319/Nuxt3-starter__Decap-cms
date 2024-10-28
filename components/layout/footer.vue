@@ -5,6 +5,9 @@
 				<li v-for="f in friends" key="f">{{ f }}</li>
 			</ul>
 		</div>
+		<div class="footer-bottom">
+			<span>© FCPAE All Rights Reserved 2024</span>
+		</div>
 	</footer>
 </template>
 
@@ -78,12 +81,8 @@ const friends = [
 footer {
 	position: relative;
 	height: max-content;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: $spacing5;
-	margin-inline: $spacing4;
 	opacity: 0;
-	animation: 5s ease 3s forwards appear;
+	animation: 3s ease 1s forwards appear;
 
 	@keyframes appear {
 		0% {
@@ -116,5 +115,14 @@ footer {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 1rem;
 	}
+}
+.footer-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	width: 100%;
+	height: 4rem;
+	background-color: #006c96;
 }
 </style>

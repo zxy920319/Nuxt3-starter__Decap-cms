@@ -99,6 +99,8 @@ collections:
         pattern: \d{4}
       - label: Drafts
         field: draft
+      - label: Pin
+        field: pin
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
@@ -121,12 +123,13 @@ collections:
           format: "YYYY-MM-DD HH:mm",
           default: "{{now}}",
         }
-      - label: "Cover Image"
-        name: "image"
-        widget: "image"
-        required: false
-        tagname: ""
-
+      - {
+          label: "Cover Image",
+          name: "image",
+          widget: "image",
+          required: false,
+          tagname: "",
+        }
       - {
           label: "Body",
           name: "body",

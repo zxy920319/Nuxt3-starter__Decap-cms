@@ -5,7 +5,7 @@
 	>
 		<NuxtLink to="/">
 			<img
-				src="/images/upload/640.jpg"
+				src="/images/logos/t-l-chargement-standard.webp"
 				alt="logo"
 				width="959"
 				height="719"
