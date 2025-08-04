@@ -1,5 +1,5 @@
 <template>
-	<div id="fcpae-wrapper">
+	<div id="ucpae-wrapper">
 		<ConfigProvider :theme="{ hashed: false }">
 			<NuxtLayout>
 				<NuxtPage />

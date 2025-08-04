@@ -2,7 +2,7 @@
 	<main id="main" class="home">
 		<div class="banner">
 			<img src="/images/dsc_9660-2.jpg" alt="banner">
-			<div class="title">第 15 届 FCPAE 欧洲论坛<br>2024 11月15日-16日<br>Paris</div>
+			<div class="title">欧联盟 2025 欧洲论坛<br>2025 9月11日-12日<br>赫尔辛基</div>
 		</div>
 		<div class="content">
 			<MiscParseMarkdown :markdownString="home[locale].content" />

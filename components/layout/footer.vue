@@ -6,7 +6,7 @@
 			</ul>
 		</div>
 		<div class="footer-bottom">
-			<span>© FCPAE All Rights Reserved 2024</span>
+			<span>© UCPAE All Rights Reserved {{ currentYear }}</span>
 		</div>
 	</footer>
 </template>
@@ -75,6 +75,7 @@ const friends = [
 	'海外食品华人协会',
 	'中国西班牙学者合作交流协会',
 	'中欧创新创业协会']
+const currentYear = new Date().getFullYear();
 </script>
 
 <style lang="scss" scoped>
@@ -116,6 +117,7 @@ footer {
 		gap: 1rem;
 	}
 }
+
 .footer-bottom {
 	display: flex;
 	align-items: center;
