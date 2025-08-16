@@ -180,6 +180,7 @@ collections:
             ],
           required: true,
         }
+      - { label: "Author", name: "author", widget: "string" }
       - { label: "Pin", name: "pin", widget: "boolean", default: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - {
@@ -196,12 +197,8 @@ collections:
           required: false,
           tagname: "",
         }
-      - {
-          label: "Body",
-          name: "body",
-          widget: "markdown",
-          hint: "Main content goes here.",
-        }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      
 
   # SINGLE PAGES
   - name: "pages"

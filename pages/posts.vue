@@ -4,7 +4,7 @@
             <NuxtLink v-for="post in posts" :key="post.slug" :to="`/post/${post.slug}`">
                 <ACard :bordered="false" hoverable>
                     <template #cover>
-                        <img :src="post.image || '/images/upload/640.jpg'" alt="post cover" srcset="">
+                        <img :src="post.image || '/images/upload/logo.jpg'" alt="post cover" srcset="">
                     </template>
                     <span class="title">
                         {{ post.title }}

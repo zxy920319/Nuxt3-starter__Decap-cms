@@ -1,14 +1,22 @@
 <template>
     <ALayoutContent :style="{ 'background-color': 'rgb(239, 240, 244)' }">
         <div class="events-wrapper">
-            <NuxtLink v-for="event in events" :key="event.slug" :to="`/event/${event.slug}`">
+            <NuxtLink v-for="event in events" :key="event.slug" :to="event.link" target="_blank">
                 <ACard :bordered="false" hoverable>
                     <template #cover>
-                        <img :src="event.image || '/images/upload/640.jpg'" alt="event cover" srcset="">
+                        <img :src="event.image || '/images/upload/logo.jpg'" alt="event cover" srcset="">
                     </template>
-                    <span class="title">
-                        {{ event.title }}
-                    </span>
+                    <div>
+                        <span class="title">
+                            {{ event.title }}
+                        </span>
+                        <div class="author">
+                            {{ event.author }}
+                        </div>
+                        <div class="subtitle">
+                            {{ truncate(event.subtitle) }}
+                        </div>
+                    </div>
                 </ACard>
             </NuxtLink>
         </div>
@@ -20,6 +28,10 @@ import { LayoutContent as ALayoutContent, Card as ACard } from 'ant-design-vue'
 
 const { data: events } = reactive(await useAsyncData("events", () => queryContent("events").where({ draft: false }).sort({ pin: 1 }).find()))
 
+const truncate = (txt) => {
+    if (!txt) return '';
+    return txt.length > 48 ? txt.substring(0, 48) + '...' : txt;
+}
 </script>
 
 <style lang="scss" scoped>
@@ -59,7 +71,7 @@ const { data: events } = reactive(await useAsyncData("events", () => queryConten
         :deep(.ant-card-body) {
             width: 60%;
             display: block;
-            margin: auto 0;
+            margin: 0;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: wrap;
@@ -67,7 +79,7 @@ const { data: events } = reactive(await useAsyncData("events", () => queryConten
 
         .title {
             font-family: "Abril Fatface", "serif";
-            font-size: 1rem;
+            font-size: 1.125rem;
             line-height: 1.4;
             color: #222022;
             box-decoration-break: clone;
@@ -77,6 +89,21 @@ const { data: events } = reactive(await useAsyncData("events", () => queryConten
             background-position: 0 85%;
             padding: 0 4px;
             margin-left: -4px;
+        }
+
+        .author {
+            font-size: 0.75rem;
+            color: #3d3d3d;
+            margin: 0.25rem 0;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            color: #2d2d2d;
+            width: 100%;
+            height: 4rem;
+            overflow: hidden;
+            margin-top: 1.5rem;
         }
 
     }
