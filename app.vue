@@ -24,4 +24,11 @@ watch(() => route.query, () => {
 useHead({
 	link: [{ rel: 'preconnect', href: 'https://fonts.googleapis.com' }, { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true }, { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap' }]
 })
+
+onMounted(() => {
+	if (location.host.includes('fcpae')) {
+		console.log('redirecting to ucpae.com...');
+		window.location.href = "https://ucpae.com/";
+	}
+})
 </script>
