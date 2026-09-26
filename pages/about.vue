@@ -1,6 +1,6 @@
 <template>
     <ALayoutContent>
-        <MiscParseMarkdown :markdownString="about[locale].content" />
+        <MDC :value="about[locale].content" />
     </ALayoutContent>
 </template>
 
