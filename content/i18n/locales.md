@@ -283,7 +283,7 @@ en:
           id: standard
         - type: UCPAE Member Ticket
           priceNote: €200 / person
-          description: For UCPAE association members; eligibility requires manual verification.
+          description: For UCPAE association members.
           featured: false
           cta: Register Now
           href: https://vcwi.nl/europe-forum-2026-register-en/
@@ -293,7 +293,7 @@ en:
           id: ucpae
         - type: VCWI / Co-organiser / Submitted Applicant Concession
           priceNote: €50 / person
-          description: For VCWI members, submitted applicants and members of confirmed co-organisers; eligibility requires manual verification.
+          description: For VCWI members, submitted applicants and members of confirmed co-organisers.
           featured: true
           cta: Register Now
           href: https://vcwi.nl/europe-forum-2026-register-en/
@@ -303,7 +303,7 @@ en:
           id: concession
         - type: VCWI / Co-organiser / Submitted Applicant Concession with Dinner
           priceNote: €100 / person
-          description: For VCWI members, submitted applicants and members of confirmed co-organisers; eligibility requires manual verification.
+          description: For VCWI members, submitted applicants and members of confirmed co-organisers.
           featured: true
           cta: Register Now
           href: https://vcwi.nl/europe-forum-2026-register-en/
@@ -312,9 +312,9 @@ en:
             - Welcome gala dinner included
           id: concession_dinner
       venue: Van der Valk Hotel Eindhoven · Aalsterweg 322, 5644 RL Eindhoven, Netherlands
-      claim_note: VCWI members, submitted VCWI membership applicants and members of confirmed co-organisers may apply for the €50 / €100 concession. Submitting an application does not grant formal membership; organisers manually verify the application or member record against the registration email.
+      claim_note: Not a VCWI member yet? Submit a free membership application to request a €50 / €100 forum concession ticket.
       membership_href: https://member.vcwi.nl/apply?source=europe-forum-2026&lang=en
-      membership_cta: Apply for free VCWI membership
+      membership_cta: Apply to join VCWI for free →
     guests:
       song-zhiwei:
         name: Zhiwei Song
@@ -866,7 +866,7 @@ zh:
           id: standard
         - type: UCPAE 协会会员票
           priceNote: €200／人
-          description: 适用于 UCPAE 协会会员，资格须人工核验。
+          description: 适用于 UCPAE 协会会员。
           featured: false
           cta: 立即报名
           href: https://vcwi.nl/europe-forum-2026-register/
@@ -876,7 +876,7 @@ zh:
           id: ucpae
         - type: VCWI／协办会员及入会申请者优惠票
           priceNote: €50／人
-          description: 适用于 VCWI 会员、已提交入会申请者及确认协办单位会员，资格须人工核验。
+          description: 适用于 VCWI 会员、已提交入会申请者及确认协办单位会员。
           featured: true
           cta: 立即报名
           href: https://vcwi.nl/europe-forum-2026-register/
@@ -886,7 +886,7 @@ zh:
           id: concession
         - type: VCWI／协办会员及入会申请者优惠票（含晚宴）
           priceNote: €100／人
-          description: 适用于 VCWI 会员、已提交入会申请者及确认协办单位会员，资格须人工核验。
+          description: 适用于 VCWI 会员、已提交入会申请者及确认协办单位会员。
           featured: true
           cta: 立即报名
           href: https://vcwi.nl/europe-forum-2026-register/
@@ -895,9 +895,9 @@ zh:
             - 含欢迎晚宴
           id: concession_dinner
       venue: Van der Valk Hotel Eindhoven · Aalsterweg 322, 5644 RL Eindhoven, Netherlands
-      claim_note: VCWI 会员、已提交 VCWI 入会申请者及确认协办单位会员可申请 €50／€100 优惠。提交申请不等于成为正式会员；组委会按报名邮箱人工核验申请或会员记录。
+      claim_note: 还不是 VCWI 会员？提交入会申请后，可申请 €50／€100 论坛优惠票。
       membership_href: https://member.vcwi.nl/apply?source=europe-forum-2026&lang=zh
-      membership_cta: 免费申请 VCWI 入会
+      membership_cta: 免费申请入会 →
     guests:
       song-zhiwei:
         name: 宋志伟
