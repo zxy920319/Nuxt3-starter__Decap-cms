@@ -1,57 +1,30 @@
 <template>
-	<section id="sponsors" class="section bg-alt">
-		<div class="container">
-			<div class="sec-hd">
-				<span class="sec-label">{{ t[locale]['forum']['sponsors']['label'] }}</span>
-				<h2 class="sec-title">{{ t[locale]['forum']['sponsors']['title'] }}</h2>
-				<p class="sec-desc">{{ t[locale]['forum']['sponsors']['desc'] }}</p>
-			</div>
-
-			<div class="sponsor-tiers">
-				<div v-for="tier in tiers" :key="tier.key" class="tier-card fade-in" :class="tier.className">
-					<div class="tier-icon">
-						<img draggable="false" role="img" class="emoji" :alt="tier.alt" :src="tier.icon">
-					</div>
-					<div class="tier-name">{{ tier.name }}</div>
-					<div class="tier-en">{{ tier.en }}</div>
-					<div class="tier-price">
-						{{ tier.price }}<span v-if="tier.priceSuffix">{{ tier.priceSuffix }}</span>
-					</div>
-					<ul class="tier-list">
-						<li v-for="benefit in tier.benefits" :key="benefit">{{ benefit }}</li>
-					</ul>
-					<a :href="tier.mailto" class="tier-btn" :class="tier.btnClass">{{ t[locale]['forum']['sponsors']['inquire_button'] }}</a>
-				</div>
-			</div>
-
-			<div class="custom-box">
-				<h3>{{ t[locale]['forum']['sponsors']['custom_title'] }}</h3>
-				<p v-html="t[locale]['forum']['sponsors']['custom_desc_html']"></p>
-				<a :href="t[locale]['forum']['sponsors']['custom_mailto']" class="btn-primary">{{ t[locale]['forum']['sponsors']['custom_button'] }}</a>
-			</div>
-		</div>
-	</section>
+  <section id="sponsors" class="section bg-alt">
+    <div class="container">
+      <div class="sec-hd">
+        <span class="sec-label">{{ forum.sponsors.label }}</span>
+        <h2 class="sec-title">{{ forum.sponsors.title }}</h2>
+        <p class="sec-desc">{{ forum.sponsors.desc }}</p>
+      </div>
+      <a class="final-partner-poster-link" :href="forum.sponsors.poster" target="_blank" rel="noopener noreferrer">
+        <img class="final-partner-poster" :src="forum.sponsors.poster" :alt="forum.sponsors.poster_alt" width="1080" height="869" loading="lazy" decoding="async">
+      </a>
+      <div class="final-partner-groups">
+        <div v-for="group in forum.sponsors.groups" :key="group.label" class="final-partner-group">
+          <h3>{{ group.label }}</h3>
+          <ul><li v-for="name in group.names" :key="name">{{ name }}</li></ul>
+        </div>
+      </div>
+      <p class="final-partner-contact">{{ forum.sponsors.contact_label }} <a href="mailto:europe.forum@vcwi.nl">europe.forum@vcwi.nl</a></p>
+    </div>
+  </section>
 </template>
 
 <script setup>
-import { useLocaleStore } from '@/store/locale'
-import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
-const store = useLocaleStore()
-const { locale } = storeToRefs(store)
+import { storeToRefs } from 'pinia'
+import { useLocaleStore } from '@/store/locale'
+const { locale } = storeToRefs(useLocaleStore())
 const { data: t } = await useAsyncData('lang', () => queryContent('/i18n/locales').findOne())
-
-const tiers = computed(() => t.value[locale.value]['forum']['sponsors']['tiers'].map((tier, i) => ({
-	key: `tier-${i}`,
-	className: tier.className,
-	alt: tier.alt,
-	icon: tier.icon,
-	name: tier.name,
-	en: tier.en,
-	price: tier.price,
-	priceSuffix: tier.priceSuffix,
-	btnClass: tier.btnClass,
-	mailto: tier.mailto,
-	benefits: tier.benefits,
-})))
+const forum = computed(() => t.value[locale.value].forum)
 </script>

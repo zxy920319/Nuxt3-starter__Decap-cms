@@ -5,12 +5,13 @@
 				<span class="sec-label">{{ t[locale]['forum']['register']['label'] }}</span>
 				<h2 class="sec-title">{{ t[locale]['forum']['register']['title'] }}</h2>
 				<p class="sec-desc">{{ t[locale]['forum']['register']['desc'] }}</p>
+				<p class="sec-desc">{{ t[locale]['forum']['register']['venue'] }}</p>
 			</div>
 
 			<div class="reg-grid">
 				<div
 					v-for="option in registrationOptions"
-					:key="option.type"
+					:key="option.id"
 					class="reg-card fade-in"
 					:class="{ 'reg-featured': option.featured }"
 				>
@@ -23,6 +24,8 @@
 					<a :href="option.href" class="btn-reg" :class="{ 'btn-reg-gold': option.featured }">{{ option.cta }}</a>
 				</div>
 			</div>
+
+			<p class="visit-note">{{ t[locale]['forum']['register']['claim_note'] }} <a :href="t[locale]['forum']['register']['membership_href']">{{ t[locale]['forum']['register']['membership_cta'] }}</a></p>
 
 			<div class="wechat-box">
 				<div class="wechat-inner">

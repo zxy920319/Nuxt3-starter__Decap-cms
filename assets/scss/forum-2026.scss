@@ -1004,3 +1004,58 @@
     .session-card, .keynote-card, .tier-card, .reg-card, .tl-item { page-break-inside: avoid; }
     h2, h3, h4    { page-break-after: avoid; }
 }
+
+/* Final publicity programme: shared with the published VCWI content. */
+.forum-2026-page {
+    .pill { white-space: pre-line; overflow-wrap: anywhere; }
+    .final-source-link, .final-partner-contact a, .visit-note a { color: var(--light-blue); text-decoration: underline; text-underline-offset: 4px; }
+    .final-source-link { display: inline-block; margin-top: 16px; }
+    .final-day-title { margin: 24px 0; color: var(--text); }
+    .final-agenda { list-style: none; padding: 0; }
+    .final-agenda li { display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--border); }
+    .final-agenda-time { color: var(--mg-b); font-family: 'Exo 2', sans-serif; font-weight: 700; }
+    .final-agenda h4 { color: var(--text); font-size: 1.1rem; }
+    .final-agenda p { margin-top: 8px; color: #a7beca; white-space: pre-line; overflow-wrap: anywhere; }
+    .final-speaker-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; }
+    .final-speaker { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 16px; align-content: start; padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .final-speaker-photo { width: 84px; height: 100px; object-fit: contain; border-radius: 8px; }
+    .final-speaker h4 { color: var(--text); font-size: 1.12rem; }
+    .final-speaker-role { margin-top: 8px; color: var(--light-blue); font-size: 0.84rem; overflow-wrap: anywhere; }
+    .final-speaker-topic, .final-speaker-bio { grid-column: 1 / -1; overflow-wrap: anywhere; }
+    .final-speaker-topic { color: var(--gold); font-size: 0.95rem; font-weight: 600; }
+    .final-speaker-bio { color: #a7beca; font-size: 0.9rem; }
+    .final-tracks { display: grid; gap: 28px; }
+    .final-track { padding: 32px; border: 1px solid var(--border-m); border-radius: 12px; background: var(--bg-card); }
+    .final-track h3 { margin: 8px 0; font-size: 1.4rem; }
+    .final-track > p { color: #a7beca; }
+    .final-track .final-track-time { color: var(--gold); margin-bottom: 12px; }
+    .final-track .final-track-names { color: var(--light-blue); margin-top: 16px; }
+    .final-track-details summary { cursor: pointer; color: var(--mg-b); font-weight: 600; padding: 18px 0; }
+    .final-track-details[open] summary { margin-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .final-project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; }
+    .final-project { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .final-project img { width: 100%; height: 190px; object-fit: contain; margin-bottom: 20px; border-radius: 8px; }
+    .final-project h3 { color: var(--text); font-size: 1.15rem; overflow-wrap: anywhere; }
+    .final-project h4 { margin-top: 24px; color: var(--light-blue); }
+    .final-project p { margin-top: 12px; color: #a7beca; font-size: 0.9rem; }
+    .final-founder-bio { white-space: pre-line; }
+    .final-partner-poster-link { display: block; max-width: 1000px; margin: 0 auto 36px; }
+    .final-partner-poster { display: block; width: 100%; height: auto; border-radius: 12px; background: #fff; }
+    .final-partner-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; }
+    .final-partner-group { padding: 24px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-card); }
+    .final-partner-group h3 { color: var(--gold); margin-bottom: 12px; }
+    .final-partner-group ul { padding-left: 20px; }
+    .final-partner-group li { margin: 10px 0; overflow-wrap: anywhere; }
+    .final-partner-contact { margin-top: 32px; text-align: center; }
+    @media (max-width: 600px) {
+        .final-agenda li { grid-template-columns: 1fr; gap: 8px; }
+        .final-track { padding: 22px 16px; }
+        .final-speaker { padding: 20px; }
+    }
+    @media print {
+        .final-agenda li, .final-speaker, .final-project, .final-partner-group { break-inside: avoid; background: #fff; border-color: #ddd; }
+        .final-agenda h4, .final-speaker h4, .final-project h3, .final-track h3 { color: #111; }
+        .final-agenda p, .final-speaker-bio, .final-project p, .final-track > p, .final-partner-group li { color: #444; }
+        .final-track { background: #fff; border-color: #ddd; }
+    }
+}

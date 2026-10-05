@@ -1,34 +1,24 @@
 <template>
-	<section class="section visit-section">
-		<div class="container">
-			<div class="sec-hd">
-				<span class="sec-label">{{ t[locale]['forum']['visit']['label'] }}</span>
-				<h2 class="sec-title">{{ t[locale]['forum']['visit']['title'] }}</h2>
-				<p class="sec-desc">{{ t[locale]['forum']['visit']['desc'] }}</p>
-			</div>
-			<div class="visit-grid">
-				<div v-for="item in visitItems" :key="item.title" class="visit-card">
-					<span class="visit-icon">
-						<img draggable="false" role="img" class="emoji" :alt="item.alt" :src="item.icon">
-					</span>
-					<div>
-						<h4>{{ item.title }}</h4>
-						<p>{{ item.description }}</p>
-					</div>
-				</div>
-			</div>
-			<p class="visit-note">{{ t[locale]['forum']['visit']['note'] }}</p>
-		</div>
-	</section>
+  <section id="visit" class="section visit-section">
+    <div class="container">
+      <div class="sec-hd">
+        <span class="sec-label">{{ forum.visit.label }}</span>
+        <h2 class="sec-title">{{ forum.visit.title }}</h2>
+        <p class="sec-desc">{{ forum.visit.desc }}</p>
+      </div>
+      <div class="final-speaker-grid">
+        <ForumSpeakerCard v-for="id in forum.visit.items" :key="id" :speaker="forum.guests[id]" />
+      </div>
+      <p class="visit-note">{{ forum.visit.note }} <a href="mailto:europe.forum@vcwi.nl">europe.forum@vcwi.nl</a></p>
+    </div>
+  </section>
 </template>
 
 <script setup>
-import { useLocaleStore } from '@/store/locale'
-import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
-const store = useLocaleStore()
-const { locale } = storeToRefs(store)
+import { storeToRefs } from 'pinia'
+import { useLocaleStore } from '@/store/locale'
+const { locale } = storeToRefs(useLocaleStore())
 const { data: t } = await useAsyncData('lang', () => queryContent('/i18n/locales').findOne())
-
-const visitItems = computed(() => t.value[locale.value]['forum']['visit']['items'])
+const forum = computed(() => t.value[locale.value].forum)
 </script>
