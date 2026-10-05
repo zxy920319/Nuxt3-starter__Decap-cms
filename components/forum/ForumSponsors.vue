@@ -7,7 +7,7 @@
         <p class="sec-desc">{{ forum.sponsors.desc }}</p>
       </div>
       <a class="final-partner-poster-link" :href="forum.sponsors.poster" target="_blank" rel="noopener noreferrer">
-        <img class="final-partner-poster" :src="forum.sponsors.poster" :alt="forum.sponsors.poster_alt" width="1080" height="869" loading="lazy" decoding="async">
+        <img class="final-partner-poster" :src="forum.sponsors.poster" :alt="forum.sponsors.poster_alt" width="1347" height="1167" loading="lazy" decoding="async">
       </a>
       <div class="final-partner-groups">
         <div v-for="group in forum.sponsors.groups" :key="group.label" class="final-partner-group">
