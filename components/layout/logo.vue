@@ -16,24 +16,31 @@
 <style lang="scss" scoped>
 .company-logo {
 	position: relative;
-	height: 60px;
+	height: auto;
+	min-height: 60px;
 	margin: 1em;
-	padding-bottom: 3em;
+	padding-bottom: 0;
 	padding-right: 1em;
-	width: max-content;
+	width: auto;
+	min-width: 0;
+	max-width: 100%;
 	border-right: 1px solid $light-grey;
 
 	img {
 		position: relative;
 		height: 60px;
 		width: auto;
+		flex-shrink: 0;
 	}
 	.logo-wrapper {
 		display: flex;
+		min-width: 0;
 		justify-content: start;
 		align-items: center;
 		.org {
 			display: block;
+			min-width: 0;
+			overflow-wrap: anywhere;
 			margin-left: 0.5rem;
 			font-family: fangsong;
 		}

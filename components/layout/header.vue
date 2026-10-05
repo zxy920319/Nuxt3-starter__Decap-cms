@@ -3,7 +3,7 @@
 		<LayoutLogo />
 		<NavigationMainMenu />
 
-		<ADropdown>
+		<ADropdown :trigger="['click']">
 			<template #overlay>
 				<AMenu @click="handleMenuClick">
 					<AMenuItem key="zh">
@@ -44,7 +44,7 @@ function handleMenuClick(lang) {
 #header {
 	position: relative;
 	display: grid;
-	grid-template-columns: 1fr auto 1fr;
+	grid-template-columns: minmax(0, 1fr) auto auto;
 	grid-template-rows: 1fr;
 	padding: $spacing2;
 	// background-color: #006c96;
