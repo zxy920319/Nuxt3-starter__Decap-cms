@@ -62,8 +62,8 @@ const { locale } = storeToRefs(store)
 const { data: t } = await useAsyncData('lang', () => queryContent('/i18n/locales').findOne())
 
 const stats = computed(() => [
-	{ value: '300+', suffix: '+', label: t.value[locale.value]['forum']['hero']['stats']['attendees'] },
-	{ value: '30+', suffix: '+', label: t.value[locale.value]['forum']['hero']['stats']['member_assocs'] },
+	{ value: '36', suffix: '', label: t.value[locale.value]['forum']['hero']['stats']['attendees'] },
+	{ value: '14', suffix: '', label: t.value[locale.value]['forum']['hero']['stats']['member_assocs'] },
 	{ value: '5', suffix: '', label: t.value[locale.value]['forum']['hero']['stats']['sessions'] },
 	{ value: '2', suffix: '', label: t.value[locale.value]['forum']['hero']['stats']['days'] },
 ])

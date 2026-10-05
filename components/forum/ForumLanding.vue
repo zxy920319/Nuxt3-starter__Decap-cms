@@ -2,9 +2,10 @@
 	<div ref="root" class="forum-2026-page vcwi-forum-2026-page">
 		<ForumHero />
 		<ForumAbout />
+		<ForumSchedule />
 		<ForumKeynotes />
 		<ForumSessions />
-		<ForumSchedule />
+		<ForumProjects />
 		<ForumFieldVisit />
 		<ForumSponsors />
 		<ForumRegister />
