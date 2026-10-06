@@ -1,11 +1,11 @@
 <template>
-	<div id="main-menu">
-		<div id="mobile-menu__toggle-button" @click="toggleMobileMenu()" :class="{ mobileMenuOpen: mobileMenuActive }">
-			<span>&#x2630;</span>
+	<div id="main-menu" @keydown.esc.prevent="closeMobileMenu()">
+		<button type="button" id="mobile-menu__toggle-button" ref="mobileMenuToggle" @click="toggleMobileMenu()" :class="{ mobileMenuOpen: mobileMenuActive }" :aria-expanded="mobileMenuActive" aria-controls="main-menu-navigation">
+			<span aria-hidden="true">&#x2630;</span>
 			{{ t[locale]['menu'] }}
-		</div>
+		</button>
 
-		<nav :class="{ mobileMenuOpen: mobileMenuActive }">
+		<nav id="main-menu-navigation" :class="{ mobileMenuOpen: mobileMenuActive }">
 
 			<menu class="main-menu__basic">
 				<NuxtLink :to="{ name: 'index' , query: route.query}" class="menu-item item--home">
@@ -37,6 +37,7 @@ const { data: t } = await useAsyncData("lang", () =>
 
 const links = ["products", "dynamic-fields", "contact"];
 const mobileMenuActive = ref(false);
+const mobileMenuToggle = ref(null);
 const route = useRoute();
 watch(route, () => {
 	mobileMenuActive.value = false;
@@ -44,6 +45,11 @@ watch(route, () => {
 
 function toggleMobileMenu() {
 	mobileMenuActive.value = !mobileMenuActive.value;
+}
+
+function closeMobileMenu() {
+	mobileMenuActive.value = false;
+	mobileMenuToggle.value?.focus();
 }
 
 watch(
@@ -144,7 +150,17 @@ nav.mobileMenuOpen {
 
 #mobile-menu__toggle-button {
 	display: none;
+	appearance: none;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
 	cursor: pointer;
+
+	&:focus-visible {
+		outline: 2px solid currentColor;
+		outline-offset: 3px;
+	}
 
 	@include media(xsm) {
 		position: absolute;

@@ -21,9 +21,10 @@ watch(() => route.query, () => {
 	if (route.query.locale) setLocale(route.query.locale)
 }, { immediate: true })
 
-useHead({
+useHead(() => ({
+	htmlAttrs: { lang: store.locale },
 	link: [{ rel: 'preconnect', href: 'https://fonts.googleapis.com' }, { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true }, { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap' }]
-})
+}))
 
 onMounted(() => {
 	if (location.host.includes('fcpae')) {

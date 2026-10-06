@@ -1,6 +1,6 @@
 <template>
 	<div id="header__logo" class="company-logo">
-		<NuxtLink to="/">
+		<NuxtLink :to="{ path: '/', query: route.query }">
 			<div class="logo-wrapper">
 				<img src="/images/logos/ucpae-logo.jpg" alt="logo" width="107" height="60" />
 				<div class="org">
@@ -12,6 +12,10 @@
 		</NuxtLink>
 	</div>
 </template>
+
+<script setup>
+const route = useRoute();
+</script>
 
 <style lang="scss" scoped>
 .company-logo {
