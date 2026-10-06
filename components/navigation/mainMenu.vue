@@ -150,6 +150,7 @@ nav.mobileMenuOpen {
 
 #mobile-menu__toggle-button {
 	display: none;
+	max-width: none;
 	appearance: none;
 	border: 0;
 	background: transparent;
@@ -173,7 +174,7 @@ nav.mobileMenuOpen {
 		justify-self: center;
 		padding: $spacing1;
 		margin-top: $spacing0;
-		right: 0;
+		right: 6px;
 	}
 
 	span {
