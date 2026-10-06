@@ -1,5 +1,7 @@
 # Europe Forum final-publicity synchronization — 5 October 2026
 
+Chinese-name correction, 6 October 2026: ACPB is displayed as 旅比华人专业人士协会 in the shared association footer, for both language views. The VCWI main site and current Chinese/English forum pages were checked: they do not display the old ACPB name, so no organization was added to the forum partner board. Historical article text is preserved as source material.
+
 Source: https://mp.weixin.qq.com/s/2O-Fzwxtp6EylJ9qV2tJ5Q and the owner's confirmed name 欧洲华人专业协会联盟（UCPAE）.
 
 Both UCPAE homepage languages use `content/i18n/locales.md` for the final two-day programme, 36 distinct guest profiles, five tracks, three entrepreneurship projects, Wageningen visit and partner board. These match the VCWI release in https://github.com/AihuiFu/vcwi-web/pull/25 and its official-name correction in https://github.com/AihuiFu/vcwi-web/pull/26. Photos and the board are hosted under `public/images/forum-2026/final-publicity/`.
