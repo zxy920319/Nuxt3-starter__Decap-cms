@@ -15,3 +15,9 @@ The first content release was read back live in both languages on 5 October, inc
 The owner's revised board received on 5 October adds a separate Partners category with 荷兰香港工商总会（Netherlands Hong Kong Business Association, NHKBA） and 荷中友好协会（Vereniging Nederland China）. The eight sponsors and GoGoDutch media partner retain their categories. Both languages point to `partners-20261005-v2.png` (1347 × 1167, SHA-256 `98e8a94b5ec9f8ec6120573adb67dfc9d3a52f54d966b12aa7e3448e289d9aa1`), matching the revised VCWI board.
 
 Owner copy correction on 5 October: the promotional callout is reduced to the invitation to apply and request a €50/€100 concession ticket. Remove internal verification mechanics and repeated membership/seat caveats from the landing-page copy. Eligibility checks and approvals continue in the VCWI registration and member workflows.
+
+## Scoped navigation follow-up — 6 October 2026
+
+The owner selected only three improvements: preserve the current language when returning via the header logo and refreshing; update the HTML language with the selected language; and make the mobile menu keyboard-operable. The logo retains the existing query, the page head follows the locale store, and the menu uses a native button with `aria-expanded`, `aria-controls`, visible keyboard focus and Escape-to-close with focus return. Route changes continue to close the menu.
+
+Membership-required fields, headquarters claims, partner/ticket terminology, invalid-locale handling and the historical article link are explicitly outside this change. Existing forum copy, ticket eligibility and business workflows remain unchanged. Publication and live regression results will be recorded after the existing Netlify release completes.
