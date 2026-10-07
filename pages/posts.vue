@@ -35,20 +35,31 @@ const { data: posts } = reactive(await useAsyncData("posts", () => queryContent(
     max-width: 1120px;
     margin: 0 auto;
     padding: 24px 20px 0;
-    h1 { margin-bottom: 12px; }
+    h1 {
+        margin: 0 0 12px;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        line-height: 1.3;
+        &::before { display: none; }
+    }
 }
 .posts-wrapper {
-    max-width: 80vw;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1120px;
     margin: 1rem auto;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: $spacing5;
-    margin-inline: $spacing4;
+    > a {
+        width: min(100%, 500px);
+        min-width: 0;
+    }
 
     .ant-card {
-        width: 500px;
+        width: 100%;
         height: 300px;
         display: flex;
         box-shadow: 0 1px 2px 0 rgba(0, 108, 150, 0.1), 0 1px 6px -1px rgba(0, 108, 150, 0.1), 0 2px 4px 0 rgba(0, 108, 150, 0.1);
@@ -59,6 +70,7 @@ const { data: posts } = reactive(await useAsyncData("posts", () => queryContent(
         }
 
         :deep(.ant-card-cover) {
+            min-width: 0;
             border-radius: 32px;
             width: 40%;
             display: flex;
@@ -71,6 +83,7 @@ const { data: posts } = reactive(await useAsyncData("posts", () => queryContent(
         }
 
         :deep(.ant-card-body) {
+            min-width: 0;
             width: 60%;
             display: block;
             margin: auto 0;
