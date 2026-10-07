@@ -1,5 +1,5 @@
 <template>
-    <ALayoutContent :style="{ 'background-color': 'rgb(239, 240, 244)' }">
+    <ALayoutContent class="forum-archive" :style="{ 'background-color': 'rgb(239, 240, 244)' }">
         <header class="archive-heading">
             <h1>{{ t[locale]['posts'] }}</h1>
             <p>{{ t[locale]['forum_archive_desc'] }}</p>
@@ -31,6 +31,11 @@ const { data: posts } = reactive(await useAsyncData("posts", () => queryContent(
 </script>
 
 <style lang="scss" scoped>
+main.forum-archive.ant-layout-content {
+    width: 100%;
+    padding: 0;
+    align-items: stretch;
+}
 .archive-heading {
     max-width: 1120px;
     margin: 0 auto;
@@ -111,10 +116,13 @@ const { data: posts } = reactive(await useAsyncData("posts", () => queryContent(
 
 @media (max-width: 600px) {
     .posts-wrapper {
-        .ant-card { height: auto; flex-direction: column; }
-        :deep(.ant-card-cover) { width: calc(100% - 32px); margin: 16px; padding: 16px; }
-        :deep(.ant-card-cover img) { height: 140px; object-fit: contain; }
-        :deep(.ant-card-body) { width: 100%; margin: 0; padding: 0 20px 20px; overflow: visible; }
+        .ant-card {
+            height: auto;
+            flex-direction: column;
+            :deep(.ant-card-cover) { width: calc(100% - 32px); margin: 16px; padding: 16px; }
+            :deep(.ant-card-cover img) { height: 140px; object-fit: contain; }
+            :deep(.ant-card-body) { width: 100%; margin: 0; padding: 0 20px 20px; overflow: visible; }
+        }
         .title { overflow-wrap: anywhere; }
     }
 }

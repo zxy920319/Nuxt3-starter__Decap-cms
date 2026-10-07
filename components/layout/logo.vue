@@ -29,6 +29,12 @@ const route = useRoute();
 	min-width: 0;
 	max-width: 100%;
 	border-right: 1px solid $light-grey;
+	@include media(xsm) {
+		margin-right: 64px;
+		padding-right: 0;
+		border-right: 0;
+		img { height: 50px; }
+	}
 
 	img {
 		position: relative;

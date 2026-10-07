@@ -14,6 +14,9 @@ maximum while shrinking to the available mobile width, and the new archive
 heading has explicit spacing. Preserve all existing article content and covers.
 At phone widths, covers sit above titles so text keeps a readable column width;
 cover images use contain scaling and titles remain fully visible.
+The archive root overrides the legacy layout's extra content padding. Mobile
+card rules match the base card selectors so the full-width image/text layout
+is applied. The shared phone header reserves space for its menu button.
 
 Owner correction, 7 October 2026: the EuCLP founder's Chinese name is 苏亦博
 (Yibo Su). The agricultural visit is fully booked at 40 participants; both
