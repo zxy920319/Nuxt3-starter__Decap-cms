@@ -8,6 +8,11 @@ on mobile. Language queries, the existing programme, ticket destinations,
 media rules and the confirmed full agricultural visit remain in their current
 owners. Verify the published desktop and mobile screens after release.
 
+The mobile navigation check also found the historical archive's fixed 500px
+cards expanding the page beyond the viewport. Cards now keep that desktop
+maximum while shrinking to the available mobile width, and the new archive
+heading has explicit spacing. Preserve all existing article content and covers.
+
 Owner correction, 7 October 2026: the EuCLP founder's Chinese name is 苏亦博
 (Yibo Su). The agricultural visit is fully booked at 40 participants; both
 languages show this in the schedule, visit heading and availability note.
