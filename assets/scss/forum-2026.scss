@@ -1007,6 +1007,10 @@
 
 /* Final publicity programme: shared with the published VCWI content. */
 .forum-2026-page {
+    .forum-media-notice { margin: 28px 0; padding: 24px; border: 1px solid var(--border-m); border-radius: 12px; background: var(--bg-card); overflow-wrap: anywhere; }
+    .forum-media-notice h3 { color: var(--gold); font-size: 1.2rem; }
+    .forum-media-notice p { margin-top: 12px; color: var(--text); }
+    .forum-media-notice a { color: var(--light-blue); text-decoration: underline; text-underline-offset: 4px; }
     .pill { white-space: pre-line; overflow-wrap: anywhere; }
     .final-source-link, .final-partner-contact a, .visit-note a { color: var(--light-blue); text-decoration: underline; text-underline-offset: 4px; }
     .final-source-link { display: inline-block; margin-top: 16px; }
