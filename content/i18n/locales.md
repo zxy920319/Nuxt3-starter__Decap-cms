@@ -218,15 +218,15 @@ en:
               description: Continue conversations and explore cooperation.
             - time: 13:30–17:00
               title: Dutch Modern Agricultural Innovation Visit
-              description: "Visit Wageningen University & Research, its high-tech greenhouses and research facilities, to explore agricultural technology and sustainability. Capacity: 40 participants; contact the organisers to confirm availability."
+              description: "Visit Wageningen University & Research, its high-tech greenhouses and research facilities, to explore agricultural technology and sustainability. The agricultural visit is fully booked (40 participants)."
     visit:
       label: AGRICULTURAL INNOVATION VISIT
-      title: Agricultural Innovation at Wageningen University & Research
+      title: Agricultural Innovation at Wageningen University & Research (Fully Booked)
       desc: 10 October, 13:30–17:00. Explore high-tech greenhouses and research facilities, modern agriculture, agricultural technology and sustainability.
       items:
         - mengjing-sun
         - cynthia-zhu
-      note: "Capacity: 40 participants. The official announcement reported 2 places remaining on 5 October; contact the organisers for current availability."
+      note: "The agricultural visit is fully booked (40 participants)."
     sponsors:
       label: ORGANIZATIONS & PARTNERS
       title: Organizations and Partners
@@ -805,15 +805,15 @@ zh:
               description: 延续交流，推进合作洽谈。
             - time: 13:30–17:00
               title: 荷兰现代农业创新考察
-              description: 走进 Wageningen University & Research，参观现代高科技温室及科研中心，了解农业科技与可持续发展实践。参访容量 40 人，请联系组委会确认名额。
+              description: 走进 Wageningen University & Research，参观现代高科技温室及科研中心，了解农业科技与可持续发展实践。农业参访名额已满（40 人）。
     visit:
       label: AGRICULTURAL INNOVATION VISIT
-      title: 瓦赫宁根大学农业创新考察
+      title: 瓦赫宁根大学农业创新考察（名额已满）
       desc: 10 月 10 日 13:30–17:00，参观高科技温室及科研中心，了解现代农业、农业科技与可持续发展实践。
       items:
         - mengjing-sun
         - cynthia-zhu
-      note: 参访容量 40 人。10 月 5 日官方公告发布时剩余 2 席，请联系组委会确认当前名额。
+      note: 农业参访名额已满（40 人）。
     sponsors:
       label: ORGANIZATIONS & PARTNERS
       title: 组织机构与合作伙伴
@@ -1171,6 +1171,6 @@ zh:
           image: /images/forum-2026/final-publicity/manus-project.png
         - name: European Circular Logistics Packaging B.V.（EuCLP）
           description: 总部位于荷兰的循环材料科技企业，以先进机械回收技术（AMR）将塑料分选残余物转化为工程级再生塑料，为循环运输包装开发高性能、低成本材料，减少对原生塑料的依赖。
-          founders: 苏一博（Yibo Su）：创始人，曾在 TNO 工作七年，研究循环塑料包装及汽车零部件。获谢菲尔德大学机械工程与工业管理硕士、特文特大学机械工程博士。
+          founders: 苏亦博（Yibo Su）：创始人，曾在 TNO 工作七年，研究循环塑料包装及汽车零部件。获谢菲尔德大学机械工程与工业管理硕士、特文特大学机械工程博士。
           image: /images/forum-2026/final-publicity/euclp-yibo-su.png
 ---

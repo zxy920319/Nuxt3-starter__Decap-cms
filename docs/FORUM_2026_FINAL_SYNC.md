@@ -1,5 +1,9 @@
 # Europe Forum final-publicity synchronization — 5 October 2026
 
+Owner correction, 7 October 2026: the EuCLP founder's Chinese name is 苏亦博
+(Yibo Su). The agricultural visit is fully booked at 40 participants; both
+languages show this in the schedule, visit heading and availability note.
+
 ## Photography and publication notice — 7 October 2026
 
 Both forum homepage languages show the media notice beside registration, and the shared footer links to the VCWI bilingual rules at https://vcwi.nl/europe-forum-2026-media-policy/. VCWI coordinates this forum's official communications. Recording for public distribution and publishing event material, including on personal social-media accounts, require prior written permission; recording permission is separate from publication permission. Private keepsake photographs, third-party rights and statutory exceptions are covered by the complete rules. Registration still uses the existing VCWI forms; this display change does not record attendee acceptance or modify payment or privacy consent. Publication and live read-back are separate from source validation.
@@ -12,7 +16,7 @@ Both UCPAE homepage languages use `content/i18n/locales.md` for the final two-da
 
 The opening welcome address spells out 欧洲华人专业协会联盟（UCPAE） with President 宋志伟. The English name is United Chinese Professional Associations in Europe. Existing historical FCPAE articles remain historical records.
 
-The public ticket descriptions are €500 standard, €200 UCPAE member, €50 VCWI/submitted-applicant/confirmed-co-organizer concession without dinner, and €100 concession with dinner. Registration stays in the VCWI system. A submitted membership application can support a manually verified concession claim; it does not grant formal membership. The agricultural visit has a capacity of forty; the two remaining places are explicitly dated to the 5 October announcement.
+The public ticket descriptions are €500 standard, €200 UCPAE member, €50 VCWI/submitted-applicant/confirmed-co-organizer concession without dinner, and €100 concession with dinner. Registration stays in the VCWI system. A submitted membership application can support a manually verified concession claim; it does not grant formal membership. The agricultural visit has a capacity of forty and is fully booked, as confirmed by the owner on 7 October.
 
 Validation records must distinguish lightweight Vue/SCSS/data checks, complete static generation, publication and live bilingual/mobile acceptance. Local full generation is subject to the shared heavy-task resource slot; a busy slot must not be bypassed. The existing Netlify publication route is the release target, https://ucpae.com/.
 
