@@ -1,5 +1,13 @@
 # Europe Forum final-publicity synchronization — 5 October 2026
 
+Public-site fixes, 7 October 2026: both languages distinguish a direct
+`2026 Forum` entry from the forum archive in navigation. The archive has a
+heading and explanation. The forum hero uses less upper spacing and places
+registration/programme actions before its statistics so they appear earlier
+on mobile. Language queries, the existing programme, ticket destinations,
+media rules and the confirmed full agricultural visit remain in their current
+owners. Verify the published desktop and mobile screens after release.
+
 Owner correction, 7 October 2026: the EuCLP founder's Chinese name is 苏亦博
 (Yibo Su). The agricultural visit is fully booked at 40 participants; both
 languages show this in the schedule, visit heading and availability note.
