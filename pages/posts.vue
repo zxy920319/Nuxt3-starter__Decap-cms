@@ -108,4 +108,14 @@ const { data: posts } = reactive(await useAsyncData("posts", () => queryContent(
 
     }
 }
+
+@media (max-width: 600px) {
+    .posts-wrapper {
+        .ant-card { height: auto; flex-direction: column; }
+        :deep(.ant-card-cover) { width: calc(100% - 32px); margin: 16px; padding: 16px; }
+        :deep(.ant-card-cover img) { height: 140px; object-fit: contain; }
+        :deep(.ant-card-body) { width: 100%; margin: 0; padding: 0 20px 20px; overflow: visible; }
+        .title { overflow-wrap: anywhere; }
+    }
+}
 </style>
