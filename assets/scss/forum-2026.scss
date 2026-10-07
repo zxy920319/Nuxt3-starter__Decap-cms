@@ -202,11 +202,11 @@
    HERO
    ============================================================ */
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     text-align: center; position: relative;
-    padding: 120px 24px 80px; z-index: 5;
+    padding: 48px 24px 64px; z-index: 5;
     /* Subtle dot-grid — UCPAE green */
     background-image: radial-gradient(rgba(29,175,96,0.14) 1px, transparent 1px);
     background-size: 32px 32px;
@@ -275,11 +275,11 @@
 }
 .hero-sub {
     font-size: clamp(0.9rem, 1.8vw, 1.12rem);
-    color: var(--muted); margin-bottom: 44px;
+    color: var(--muted); margin-bottom: 24px;
     max-width: 640px; margin-left: auto; margin-right: auto;
 }
 
-.hero-stats { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 44px; }
+.hero-stats { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 28px; margin-bottom: 28px; }
 .stat-item { padding: 0 28px; text-align: center; }
 .stat-num {
     display: block; font-family: 'Exo 2', sans-serif;
@@ -820,6 +820,12 @@
     .sponsor-tiers { flex-direction: column; }
     .footer-grid { grid-template-columns: 1fr; gap: 28px; }
     .hero-btns { flex-direction: column; align-items: center; }
+    .hero { padding: 24px 16px 32px; }
+    .hero-forum-brand { margin-bottom: 16px; }
+    .hero-meta { margin-bottom: 16px; }
+    .hero-sub { margin-bottom: 20px; }
+    .hero-btns a { width: min(100%, 340px); }
+    .hero-scroll-hint { display: none; }
     .hero-forum-brand { gap: 8px; }
 
     .timeline { padding-left: 78px; }

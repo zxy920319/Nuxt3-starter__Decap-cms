@@ -3,7 +3,9 @@ en:
   home: Home
   menu: Menu
   about: About Us
-  posts: Europe Forum
+  current_forum: 2026 Forum
+  posts: Forum Archive
+  forum_archive_desc: Reports from past forums, meeting records and related forum announcements.
   events: Events
   forum:
     brand_forum: Europe Forum
@@ -590,7 +592,9 @@ zh:
   home: 首页
   menu: 菜单
   about: 关于我们
-  posts: 欧洲论坛
+  current_forum: 2026 论坛
+  posts: 历届论坛
+  forum_archive_desc: 历届论坛报道、会议记录及论坛相关资讯。
   events: 活动发布
   forum:
     brand_forum: 欧洲论坛

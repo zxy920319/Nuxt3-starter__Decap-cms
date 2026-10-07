@@ -1,5 +1,9 @@
 <template>
     <ALayoutContent :style="{ 'background-color': 'rgb(239, 240, 244)' }">
+        <header class="archive-heading">
+            <h1>{{ t[locale]['posts'] }}</h1>
+            <p>{{ t[locale]['forum_archive_desc'] }}</p>
+        </header>
         <div class="posts-wrapper">
             <NuxtLink v-for="post in posts" :key="post.slug" :to="`/post/${post.slug}`">
                 <ACard :bordered="false" hoverable>
@@ -17,12 +21,22 @@
 
 <script setup>
 import { LayoutContent as ALayoutContent, Card as ACard } from 'ant-design-vue'
+import { storeToRefs } from 'pinia'
+import { useLocaleStore } from '@/store/locale'
+const { locale } = storeToRefs(useLocaleStore())
+const { data: t } = await useAsyncData('lang', () => queryContent('/i18n/locales').findOne())
 
 const { data: posts } = reactive(await useAsyncData("posts", () => queryContent("posts").where({ draft: false }).sort({ pin: 1 }).find()))
 
 </script>
 
 <style lang="scss" scoped>
+.archive-heading {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 24px 20px 0;
+    h1 { margin-bottom: 12px; }
+}
 .posts-wrapper {
     max-width: 80vw;
     margin: 1rem auto;

@@ -14,6 +14,9 @@
 				<NuxtLink :to="{ name: 'about' , query: route.query}" class="menu-item item--home">
 					<span>{{ t[locale]['about'] }}</span>
 				</NuxtLink>
+				<NuxtLink :to="{ name: 'index', query: route.query, hash: '#forum' }" class="menu-item">
+					<span>{{ t[locale]['current_forum'] }}</span>
+				</NuxtLink>
 				<NuxtLink :to="{ name: 'posts' , query: route.query}" class="menu-item item--home">
 					<span>{{ t[locale]['posts'] }}</span>
 				</NuxtLink>
@@ -89,8 +92,8 @@ nav {
 	}
 
 	span {
-		padding: $spacing2;
-		width: 8em;
+		padding: 0.7em 0.8em;
+		width: auto;
 
 		@include media(xsm) {
 			width: auto;

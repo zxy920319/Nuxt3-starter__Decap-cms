@@ -1,5 +1,5 @@
 <template>
-	<header class="hero">
+	<header id="forum" class="hero">
 		<div class="hero-glow" />
 		<div class="hero-content container">
 			<div class="hero-forum-brand">
@@ -26,6 +26,13 @@
 			</h1>
 			<p class="hero-sub">{{ t[locale]['forum']['hero']['sub'] }}</p>
 
+			<div class="hero-btns">
+				<a :href="t[locale]['forum']['links']['register_href']" class="btn-primary">{{
+					t[locale]['forum']['hero']['register'] }}</a>
+				<a :href="t[locale]['forum']['links']['partners_href']" class="btn-secondary">{{
+					t[locale]['forum']['hero']['partners'] }}</a>
+			</div>
+
 			<div class="hero-stats">
 				<template v-for="(stat, index) in stats" :key="stat.label">
 					<div v-if="index > 0" class="stat-div" />
@@ -38,12 +45,6 @@
 				</template>
 			</div>
 
-			<div class="hero-btns">
-				<a :href="t[locale]['forum']['links']['register_href']" class="btn-primary">{{
-					t[locale]['forum']['hero']['register'] }}</a>
-				<a :href="t[locale]['forum']['links']['partners_href']" class="btn-secondary">{{
-					t[locale]['forum']['hero']['partners'] }}</a>
-			</div>
 		</div>
 
 		<div class="hero-scroll-hint">
