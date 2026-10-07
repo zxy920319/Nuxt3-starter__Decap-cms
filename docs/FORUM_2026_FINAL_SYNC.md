@@ -1,5 +1,9 @@
 # Europe Forum final-publicity synchronization — 5 October 2026
 
+## Photography and publication notice — 7 October 2026
+
+Both forum homepage languages show the media notice beside registration, and the shared footer links to the VCWI bilingual rules at https://vcwi.nl/europe-forum-2026-media-policy/. VCWI coordinates this forum's official communications. Recording for public distribution and publishing event material, including on personal social-media accounts, require prior written permission; recording permission is separate from publication permission. Private keepsake photographs, third-party rights and statutory exceptions are covered by the complete rules. Registration still uses the existing VCWI forms; this display change does not record attendee acceptance or modify payment or privacy consent. Publication and live read-back are separate from source validation.
+
 Chinese-name correction, 6 October 2026: ACPB is displayed as 旅比华人专业人士协会 in the shared association footer, for both language views. The VCWI main site and current Chinese/English forum pages were checked: they do not display the old ACPB name, so no organization was added to the forum partner board. Historical article text is preserved as source material.
 
 Source: https://mp.weixin.qq.com/s/2O-Fzwxtp6EylJ9qV2tJ5Q and the owner's confirmed name 欧洲华人专业协会联盟（UCPAE）.

@@ -7,11 +7,14 @@
 		</div>
 		<div class="footer-bottom">
 			<span>© UCPAE All Rights Reserved {{ currentYear }}</span>
+			<a :href="`https://vcwi.nl/europe-forum-2026-media-policy/#${localeStore.locale === 'zh' ? 'zh' : 'en'}`">{{ localeStore.locale === 'zh' ? '2026 论坛拍摄与媒体发布规则' : '2026 Forum Photography & Media Rules' }}</a>
 		</div>
 	</footer>
 </template>
 
 <script setup>
+import { useLocaleStore } from '@/store/locale'
+const localeStore = useLocaleStore()
 const friends = [
 	'中国留德学者计算机学会',
 	'留瑞学者通讯与计算机学会',
@@ -119,12 +122,17 @@ footer {
 }
 
 .footer-bottom {
+	flex-wrap: wrap;
+	gap: 12px;
+	a { color: inherit; text-decoration: underline; }
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: white;
 	width: 100%;
-	height: 4rem;
+	min-height: 4rem;
+	padding: 12px 16px;
+	text-align: center;
 	background-color: #006c96;
 }
 </style>

@@ -27,6 +27,12 @@
 
 			<p class="visit-note">{{ t[locale]['forum']['register']['claim_note'] }} <a :href="t[locale]['forum']['register']['membership_href']">{{ t[locale]['forum']['register']['membership_cta'] }}</a></p>
 
+			<aside class="forum-media-notice" aria-labelledby="forum-media-title">
+				<h3 id="forum-media-title">{{ t[locale]['forum']['register']['media_title'] }}</h3>
+				<p>{{ t[locale]['forum']['register']['media_notice'] }}</p>
+				<p><a :href="t[locale]['forum']['register']['media_rules_href']">{{ t[locale]['forum']['register']['media_rules_label'] }}</a> · <a href="mailto:europe.forum@vcwi.nl">europe.forum@vcwi.nl</a></p>
+			</aside>
+
 			<div class="wechat-box">
 				<div class="wechat-inner">
 					<div class="qr-wrap">

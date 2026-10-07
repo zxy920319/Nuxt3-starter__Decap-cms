@@ -270,6 +270,10 @@ en:
       follow_desc_html: Follow the VCWI WeChat Official Account for the final programme, speaker profiles, innovation projects and event notices.
       contact_email: europe.forum@vcwi.nl
       contact_email_href: mailto:europe.forum@vcwi.nl
+      media_title: Photography & Media Notice
+      media_notice: "VCWI coordinates this forum's publicity and media arrangements and issues explanations and corrections of official information. Interviews, livestreaming, recordings intended for public distribution and publication of event material, including on personal social-media channels, require prior written permission from VCWI. Permission to record does not automatically include permission to publish. Respect image rights, privacy and intellectual property."
+      media_rules_label: Read the full rules
+      media_rules_href: https://vcwi.nl/europe-forum-2026-media-policy/#en
       options:
         - type: Standard Ticket
           priceNote: €500 / person
@@ -848,6 +852,10 @@ zh:
       label: REGISTRATION
       title: 立即报名
       desc: 名额有限，欢迎立即报名。
+      media_title: 拍摄与媒体发布须知
+      media_notice: VCWI 统筹本届论坛的宣传及媒体事务，并负责官方信息的说明与更正。采访、直播、用于公开传播的录音录像及活动素材的对外发布（含自媒体）须事先取得 VCWI 书面许可；获准拍摄不等于获准发布。请尊重肖像、隐私与知识产权。
+      media_rules_label: 阅读完整规则
+      media_rules_href: https://vcwi.nl/europe-forum-2026-media-policy/#zh
       wechat_id: 微信号：www_vcwi_nl
       follow_title: 关注官方渠道，获取最新动态
       follow_desc_html: 关注 VCWI 微信公众号，获取最终日程、嘉宾介绍、项目展示及会务通知。
