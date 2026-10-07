@@ -12,6 +12,8 @@ The mobile navigation check also found the historical archive's fixed 500px
 cards expanding the page beyond the viewport. Cards now keep that desktop
 maximum while shrinking to the available mobile width, and the new archive
 heading has explicit spacing. Preserve all existing article content and covers.
+At phone widths, covers sit above titles so text keeps a readable column width;
+cover images use contain scaling and titles remain fully visible.
 
 Owner correction, 7 October 2026: the EuCLP founder's Chinese name is 苏亦博
 (Yibo Su). The agricultural visit is fully booked at 40 participants; both
