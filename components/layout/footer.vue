@@ -77,7 +77,9 @@ const friends = [
 	'中欧生命科学联盟',
 	'海外食品华人协会',
 	'中国西班牙学者合作交流协会',
-	'中欧创新创业协会']
+	'中欧创新创业协会',
+	'中东欧中国科技交流协会',
+	'全法中国青年科创协会']
 const currentYear = new Date().getFullYear();
 </script>
 
