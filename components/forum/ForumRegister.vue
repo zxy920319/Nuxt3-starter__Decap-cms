@@ -8,25 +8,6 @@
 				<p class="sec-desc">{{ t[locale]['forum']['register']['venue'] }}</p>
 			</div>
 
-			<div class="reg-grid">
-				<div
-					v-for="option in registrationOptions"
-					:key="option.id"
-					class="reg-card fade-in"
-					:class="{ 'reg-featured': option.featured }"
-				>
-					<div class="reg-type">{{ option.type }}</div>
-					<div class="reg-price-note">{{ option.priceNote }}</div>
-					<p>{{ option.description }}</p>
-					<ul>
-						<li v-for="benefit in option.benefits" :key="benefit">{{ benefit }}</li>
-					</ul>
-					<a :href="option.href" class="btn-reg" :class="{ 'btn-reg-gold': option.featured }">{{ option.cta }}</a>
-				</div>
-			</div>
-
-			<p class="visit-note">{{ t[locale]['forum']['register']['claim_note'] }} <a :href="t[locale]['forum']['register']['membership_href']">{{ t[locale]['forum']['register']['membership_cta'] }}</a></p>
-
 			<aside class="forum-media-notice" aria-labelledby="forum-media-title">
 				<h3 id="forum-media-title">{{ t[locale]['forum']['register']['media_title'] }}</h3>
 				<p>{{ t[locale]['forum']['register']['media_notice'] }}</p>
@@ -60,10 +41,8 @@
 <script setup>
 import { useLocaleStore } from '@/store/locale'
 import { storeToRefs } from 'pinia'
-import { computed } from 'vue'
 const store = useLocaleStore()
 const { locale } = storeToRefs(store)
 const { data: t } = await useAsyncData('lang', () => queryContent('/i18n/locales').findOne())
 
-const registrationOptions = computed(() => t.value[locale.value]['forum']['register']['options'])
 </script>

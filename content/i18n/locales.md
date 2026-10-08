@@ -11,7 +11,7 @@ en:
     brand_forum: Europe Forum
     brand_en: EUROPE FORUM
     links:
-      register_href: https://vcwi.nl/europe-forum-2026-register-en/
+      register_href: "#register"
       partners_href: "#schedule"
     hero:
       date: October 9–10, 2026
@@ -22,7 +22,7 @@ en:
       h1_gradient: China-Europe Exchange in a Changing World
       sub: Connecting Chinese Professionals Across Europe · Bridging Government, Industry, Academia & Research · Exploring New China-Europe Opportunities
       explore_more: Explore More
-      register: Register Now
+      register: Registration Closed
       partners: View the Final Programme
       stats:
         attendees: Announced Guests
@@ -265,8 +265,8 @@ en:
       contact_label: "Forum and partnership enquiries:"
     register:
       label: REGISTRATION
-      title: Register Now
-      desc: Places are limited — register today to secure your spot.
+      title: Registration Closed
+      desc: Registration closed at 00:00 on 8 October 2026, Netherlands time (CEST).
       wechat_id: "WeChat: www_vcwi_nl"
       follow_title: Follow Our Official Channels for Updates
       follow_desc_html: Follow the VCWI WeChat Official Account for the final programme, speaker profiles, innovation projects and event notices.
@@ -600,7 +600,7 @@ zh:
     brand_forum: 欧洲论坛
     brand_en: EUROPE FORUM
     links:
-      register_href: https://vcwi.nl/europe-forum-2026-register/
+      register_href: "#register"
       partners_href: "#schedule"
     hero:
       date: 2026年10月9–10日
@@ -611,7 +611,7 @@ zh:
       h1_gradient: 中欧交流与未来发展
       sub: 汇聚全欧华人精英 · 搭建政产学研跨国桥梁 · 共探中欧合作新机遇
       explore_more: 向下探索
-      register: 立即报名
+      register: 报名已截止
       partners: 查看最终日程
       stats:
         attendees: 已公布嘉宾
@@ -854,8 +854,8 @@ zh:
       contact_label: 论坛及合作咨询：
     register:
       label: REGISTRATION
-      title: 立即报名
-      desc: 名额有限，欢迎立即报名。
+      title: 报名已截止
+      desc: 报名已于荷兰时间 2026 年 10 月 8 日 00:00 截止。
       media_title: 拍摄与媒体发布须知
       media_notice: VCWI 统筹本届论坛的宣传及媒体事务，并负责官方信息的说明与更正。采访、直播、用于公开传播的录音录像及活动素材的对外发布（含自媒体）须事先取得 VCWI 书面许可；获准拍摄不等于获准发布。请尊重肖像、隐私与知识产权。
       media_rules_label: 阅读完整规则
