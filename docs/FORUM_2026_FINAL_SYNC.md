@@ -1,5 +1,10 @@
 # Europe Forum final-publicity synchronization — 5 October 2026
 
+Association-list addition, 8 October 2026: at the owner's request, the shared
+UCPAE website footer includes 中东欧中国科技交流协会 and
+全法中国青年科创协会. Their supplied Chinese names appear in both language
+views. This update is limited to the UCPAE website association list.
+
 Public-site fixes, 7 October 2026: both languages distinguish a direct
 `2026 Forum` entry from the forum archive in navigation. The archive has a
 heading and explanation. The forum hero uses less upper spacing and places
