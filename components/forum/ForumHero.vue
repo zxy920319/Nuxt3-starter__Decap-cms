@@ -27,8 +27,7 @@
 			<p class="hero-sub">{{ t[locale]['forum']['hero']['sub'] }}</p>
 
 			<div class="hero-btns">
-				<a :href="t[locale]['forum']['links']['register_href']" class="btn-primary">{{
-					t[locale]['forum']['hero']['register'] }}</a>
+				<span class="pill">{{ t[locale]['forum']['hero']['register'] }}</span>
 				<a :href="t[locale]['forum']['links']['partners_href']" class="btn-secondary">{{
 					t[locale]['forum']['hero']['partners'] }}</a>
 			</div>
