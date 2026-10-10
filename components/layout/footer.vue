@@ -2,7 +2,10 @@
 	<footer>
 		<div id="footer-wrapper">
 			<ul>
-				<li v-for="f in friends" key="f">{{ f }}</li>
+				<li v-for="f in friends" :key="f">
+					<a v-if="f === '奥地利code4u科技教育协会'" href="https://code4u.at/">{{ f }}</a>
+					<template v-else>{{ f }}</template>
+				</li>
 			</ul>
 		</div>
 		<div class="footer-bottom">
@@ -74,14 +77,14 @@ const friends = [
 	'欧中投资协会',
 	'芬兰华人科技协会',
 	'中国旅法航空航天协会',
-	'中欧生命科学联盟',
 	'海外食品华人协会',
 	'中国西班牙学者合作交流协会',
 	'中欧创新创业协会',
 	'中东欧中国科技交流协会',
 	'全法中国青年科创协会',
 	'中欧城市更新与智慧城市研究会',
-	'法中孵化器联盟协会']
+	'法中孵化器联盟协会',
+	'奥地利code4u科技教育协会']
 const currentYear = new Date().getFullYear();
 </script>
 
@@ -122,6 +125,7 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 1rem;
+		a { color: inherit; text-decoration: underline; }
 	}
 }
 
