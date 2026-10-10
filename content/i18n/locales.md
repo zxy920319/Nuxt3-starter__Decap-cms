@@ -233,7 +233,7 @@ en:
       label: ORGANIZATIONS & PARTNERS
       title: Organizations and Partners
       desc: Thank you to the organizations supporting Europe Forum 2026. Categories and names follow the organizing committee’s latest partner board.
-      poster: /images/forum-2026/final-publicity/partners-20261005-v2.png
+      poster: /images/forum-2026/final-publicity/partners-20261008-marktspan.png
       poster_alt: Europe Forum 2026 organizer, co-organizer, support, sponsors, partners and media partner; full text list below.
       groups:
         - label: Organizer
@@ -258,6 +258,7 @@ en:
         - label: Partners
           names:
             - Netherlands Hong Kong Business Association (NHKBA)
+            - Marktspan
             - Vereniging Nederland China (Netherlands-China Association)
         - label: Media Partner
           names:
@@ -822,7 +823,7 @@ zh:
       label: ORGANIZATIONS & PARTNERS
       title: 组织机构与合作伙伴
       desc: 感谢以下机构对 2026 欧洲论坛的支持。分类与名单按组委会最新海报更新。
-      poster: /images/forum-2026/final-publicity/partners-20261005-v2.png
+      poster: /images/forum-2026/final-publicity/partners-20261008-marktspan.png
       poster_alt: 2026 欧洲论坛组织机构、支持单位、赞助方、合作伙伴及媒体伙伴海报；完整名单列于下方。
       groups:
         - label: 主办方
@@ -847,6 +848,7 @@ zh:
         - label: 合作伙伴
           names:
             - 荷兰香港工商总会（NHKBA）
+            - Marktspan
             - 荷中友好协会（Vereniging Nederland China）
         - label: 媒体伙伴
           names:

@@ -1,5 +1,17 @@
 # Europe Forum final-publicity synchronization — 5 October 2026
 
+Owner-requested corrections, 11 October 2026: remove the second occurrence of
+中欧生命科学联盟 from the shared association footer and add
+奥地利code4u科技教育协会 linked to `https://code4u.at/`. The existing
+法中孵化器联盟协会 remains once. Separate the historical forum announcement's
+URL from the adjoining Chinese instructions, using an explicit Markdown link to
+`https://vcwi.nl/europe-forum-2026-en/`; preserve the announcement's original body.
+Both forum languages add Marktspan to Partners and use the approved VCWI board
+`partners-20261008-marktspan.png` (1347 × 1167, SHA-256
+`e39b51544647e4d972511eac7d9de88cc02c277b0f86c23501cb273ebb7c58c4`).
+VCWI already lists this partner and uses this board, so it needs no duplicate
+partner edit. Source changes and live publication must be verified separately.
+
 Association-list addition, 8 October 2026: at the owner's request, the shared
 UCPAE website footer includes 中东欧中国科技交流协会 and
 全法中国青年科创协会. Their supplied Chinese names appear in both language
